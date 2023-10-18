@@ -184,7 +184,10 @@ a {
   padding-left: 15px;
 }
 
-.section-title2 {
+.title2 {
+  display: none;
+}
+.sub-title2 {
   display: none;
 }
 
@@ -203,12 +206,8 @@ a {
   .left-container {
     display: none;
   }
-  .right-container .title {
+  .section-title2 {
     padding: 16px 16px 0;
-    display: flex;
-  }
-  .right-container .sub-title {
-    padding: 0 16px;
     display: flex;
   }
 }
