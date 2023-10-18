@@ -12,6 +12,9 @@ body {
   margin: 0;
   font-family: "Roboto";
 }
+html {
+  scroll-behavior: smooth;
+}
 a {
   text-decoration: none;
   color: black;
@@ -343,4 +346,10 @@ font-size: var(--fontsize-h4);
 
 .contacts-container img {
   padding: 0 1.5vw;
+}
+
+.active {
+  background-color: rgb(221, 221, 221);
+  font-weight: 600;
+  border-left: 0.5vw solid rgb(0, 97, 0);
 }
