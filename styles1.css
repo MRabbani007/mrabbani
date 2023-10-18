@@ -184,10 +184,7 @@ a {
   padding-left: 15px;
 }
 
-.title2 {
-  display: none;
-}
-.sub-title2 {
+.section-title2 {
   display: none;
 }
 
@@ -208,7 +205,8 @@ a {
   }
   .section-title2 {
     padding: 16px 16px 0;
-    display: flex;
+    display: block;
+    margin: auto;
   }
 }
 
