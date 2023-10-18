@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <script src="to-do-list.js" defer></script>
+  <link rel="stylesheet" href="to-do-list.css" >
+</head>
+
+<body>
+<div class="main-container">
+  <div class="title">
+    To Do List<img src="/icon.png">
+  </div>
+  <div class="lists-container"> 
+    <!-- Left Column -->
+    <div>
+      <div class="create-list-plus" title="Create New List" onclick="plusToggle()">+</div>
+    </div>
+    <!-- Right Column -->
+    <div class="create-display-lists">
+      <!-- Top Row for creating new List -->
+      <div class="create-list">
+        <input class="input-list-name" id="createListName" placeholder="Enter List Name">
+        <button class="input-list-button" onclick="createList()">Add</button>
+      </div>
+      <!-- Bottom Row for displaying existing lists -->
+      <div class="display-lists-container"></div>
+    </div>
+  </div>
+</div>
+<div class="container"></div>
+</body>
+
+</html>
