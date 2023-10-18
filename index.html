@@ -14,17 +14,17 @@
     <!-- Main Header -->
     <div class="left-container">
       <div class="navigator">
-      <div class="section-title" onclick="display('title-contacts')">
+      <div class="section-title" onclick="addactive()">
         <div class="title">Mohamad Rabbani</div>
         <div class="sub-title">Electrical & Computer Engineer</div>
       </div>
       <div class="navigation-links">
-        <div class="links"><img src="./icons/about.svg"><a href="#profile">About</a></div>
-        <div class="links"><img src="./icons/experience.svg"><a href="#skills">Skills</a></div>
-        <div class="links"><img src="./icons/skills.svg"><a href="#work-experience">Experience</a></div>
-        <div class="links"><img src="./icons/projects.svg"><a href="#projects-head">Projects</a></div>
-        <div class="links"><img src="./icons/education.svg"><a href="#academic-background">Education</a></div>
-        <div class="links"><img src="./icons/contact.svg"><a href="#contacts">Contact</a></div>
+        <div class="links" id="link-about"><img src="./icons/about.svg"><a href="#profile">About</a></div>
+        <div class="links" id="link-skills"><img src="./icons/experience.svg"><a href="#skills">Skills</a></div>
+        <div class="links" id="link-experience"><img src="./icons/skills.svg"><a href="#work-experience">Experience</a></div>
+        <div class="links" id="link-projects"><img src="./icons/projects.svg"><a href="#projects-head">Projects</a></div>
+        <div class="links" id="link-education"><img src="./icons/education.svg"><a href="#academic-background">Education</a></div>
+        <div class="links" id="link-contacts"><img src="./icons/contact.svg"><a href="#contacts">Contact</a></div>
         <div class="links"><img src="./icons/resume.svg">Resume</div>
       </div>
     </div>
@@ -37,14 +37,16 @@
         <div class="sub-title">Electrical & Computer Engineer</div>
       </div>
       <!-- Profile -->
-      <div class="about" id="profile">
+      <section  class="Section" id="about">
+      <div class="about">
         <div class="section-heading">Profile</div>
-        <div class="about-text">I am a motivated individual with a passion for software development aspiring to build innovative and cutting-edge business solutions for a refined user experience. Diligent Electrical & Computer Engineer with 8 years of experience in oil & gas mega projects and the skills to complete work in a well-organized and professional manner. Experienced in working with small and large teams of diverse backgrounds across multiple companies.</div>
-      </div>
+          <div class="about-text">I am a motivated individual with a passion for software development aspiring to build innovative and cutting-edge business solutions for a refined user experience. Diligent Electrical & Computer Engineer with 8 years of experience in oil & gas mega projects and the skills to complete work in a well-organized and professional manner. Experienced in working with small and large teams of diverse backgrounds across multiple companies.</div>
+        </div>
+      </section>
 
       <!-- Skills-->
-      <section>
-        <div class="section-heading" id="skills">Skills & Competancies</div>
+      <section class="Section"  id="skills">
+        <div class="section-heading">Skills & Competancies</div>
         <div >
           <div class="skills-grid">
             <div class="skills-box">
@@ -88,8 +90,8 @@
       </section>
 
       <!-- Work Experience -->
-      <section>
-        <div class="section-heading" id="work-experience">Work Experience</div>
+      <section  class="Section" id="experience">
+        <div class="section-heading">Work Experience</div>
         <div class="body-content">
 
       <!-- First Experience Block -->
@@ -214,8 +216,8 @@
       </section>
 
       <!-- Projects -->
-    <section>
-      <div class="section-heading" id="projects-head">Projects</div>
+    <section class="Section" id="projects">
+      <div class="section-heading">Projects</div>
       <div class="projects-block">
         <h2>Coming soon</h2>
         <div><a href="./todoList/todolist.html">To Do List</a></div>
@@ -223,8 +225,8 @@
     </section>
 
       <!-- Academic Background -->
-      <section>
-        <div class="section-heading" id="academic-background">Academic Background</div>
+      <section class="Section" id="education">
+        <div class="section-heading">Academic Background</div>
         <!-- First Eduction block -->
         <div class="academics-block" onclick="display('acd1')">
           <div class="academics-col-right">
@@ -275,19 +277,21 @@
       </section>
 
       <!-- Contacts -->
-      <div class="contacts-section" id="contacts">
-        <div class="section-heading">Contacts</div>
-        <div class="contacts-container">
-          <div class="contacts">
-            <img src="./icons/mobile.svg">+77052035486</div>
-          <div class="contacts">
-            <img src="./icons/mail.svg"><a href = "mailto: mrabbani@outlook.com">mrabbani@outlook.com</a>
-          </div>
-          <div class="contacts">
-            <img src="./icons/engineer.svg">LinkedIn: <a href="www.linkedin.com/in/mohamadrabbani">Mohamad Rabbani</a></div>
-          <div class="contacts">
-            <img src="./icons/address.svg">Address: Atyrau, Kazakhstan</div>
-      </div>
+      <section class="Section" id="contacts">
+        <div class="contacts-section">
+          <div class="section-heading">Contacts</div>
+          <div class="contacts-container">
+            <div class="contacts">
+              <img src="./icons/mobile.svg">+77052035486</div>
+            <div class="contacts">
+              <img src="./icons/mail.svg"><a href = "mailto: mrabbani@outlook.com">mrabbani@outlook.com</a>
+            </div>
+            <div class="contacts">
+              <img src="./icons/engineer.svg">LinkedIn: <a href="www.linkedin.com/in/mohamadrabbani">Mohamad Rabbani</a></div>
+            <div class="contacts">
+              <img src="./icons/address.svg">Address: Atyrau, Kazakhstan</div>
+        </div>
+      </section>
     </div>
   </div>
   <script>
@@ -307,6 +311,45 @@
         }
       }
     }
+
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll(".Section");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+      // Get current scroll position
+      let scrollY = window.pageYOffset;
+      console.log("scroll");
+      // Now we loop through sections to get height, top and ID values for each
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset)-20;
+        sectionId = current.getAttribute("id");
+        /*
+        - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+        - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+        */
+       console.log(scrollY+" "+sectionTop+" "+sectionHeight+" "+current.getBoundingClientRect().top);
+        if (
+          (scrollY >= sectionTop) && (scrollY <= (sectionTop + sectionHeight))
+        ){
+          document.getElementById("link-"+sectionId).classList.add("active");
+          console.log(document.getElementById("link-"+sectionId).className);
+        } else {
+          document.getElementById("link-"+sectionId).classList.remove("active");
+        }
+    });
+  } 
+
+  function addactive(){
+    if(document.querySelector(".section-title").classList.contains("active")){
+      document.querySelector(".section-title").classList.remove("active");
+    } else {
+      document.querySelector(".section-title").classList.add("active");
+    }
+  }
   </script>
 
 </body>
