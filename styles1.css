@@ -52,6 +52,10 @@ p {
   font-size: var(--fontsize-h4);
 }
 
+.section-title2 {
+  margin: 5vh 0;
+}
+
 .navigator {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 20%;
