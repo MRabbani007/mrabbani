@@ -15,7 +15,7 @@
     <!-- Main Header -->
     <div class="left-container">
       <div class="navigator">
-      <div class="section-title" onclick="addactive()">
+      <div class="section-title"> <!--onclick="addactive()"-->
         <div class="title">Mohamad Rabbani</div>
         <div class="sub-title">Electrical & Computer Engineer</div>
       </div>
@@ -47,8 +47,8 @@
 
       <!-- Profile -->
       <section class="Section" id="about">
-        <div class="section-heading">Profile</div>
-        <div class="about">
+        <div class="section-heading" id="hd-about">Profile</div>
+        <div class="about-block">
           <div class="about-statement">Mission-driven software engineer with a passion for thoughtful UI design and a futuristic user experience</div>
           <div class="about-text"><p>I am a motivated individual with a passion for software development aspiring to build innovative and cutting-edge business solutions for a refined user experience.</p>
           <p>Diligent Electrical & Computer Engineer with 8 years of experience in oil & gas mega projects and the skills to complete work in a well-organized and professional manner.</p> 
@@ -59,9 +59,8 @@
 
       <!-- Skills-->
       <section class="Section" id="skills">
-        <div class="section-heading">Skills & Competancies</div>
-        <div class="skills-grid">
-          <div class="skills-box">
+        <div class="section-heading" id="hd-skills">Skills & Competancies</div>
+          <div class="skills-block" id="technical-skills">
             <div class="skills-header">Technical Skills</div>
             <div class="skills-body">
               <div class="skills-item"><img src="./png/java.png"><p>Java</p></div>
@@ -76,7 +75,7 @@
               <div class="skills-item"><img src="./png/photoshop.png"><p>Photoshop</p></div>
             </div>
           </div>
-          <div class="skills-box">
+          <div class="skills-block">
             <div class="skills-header">Soft Skills</div>
             <div class="skills-body">
               <div class="skills-item">Team Leadership & Supervision</div>
@@ -85,7 +84,7 @@
               <div class="skills-item">Time Management</div>
             </div>
           </div>
-          <div class="skills-box">
+          <div class="skills-block">
             <div class="skills-header">Courses</div>
             <div class="skills-body">
               <div class="skills-item">Agile Scrum Methodologies</div>
@@ -93,58 +92,60 @@
               <div class="skills-item">Software Testing</div>
             </div>
           </div>
-        </div>
       </section>
 
       <!-- Work Experience -->
       <section  class="Section" id="experience">
-        <div class="section-heading">Work Experience</div>
-        <div class="body-content">
+        <div class="section-heading" id="hd-experience">Work Experience</div>
 
-      <!-- First Experience Block -->
-          <div class="experience-block" onclick="display('exp1')">
-            <div class="experience-col-right">
-              <div class="experience-heading">
-                <div class="experience-position" title="position">E&I Engineer</div>
+        <!-- First Experience Block -->
+        <div class="experience-block" onclick="display('exp1')">
+            <div class="experience-heading">
+              <div class="experience-position" title="position">E&I Engineer</div>
+              <div class="experience-company-logo">
                 <div class="experience-company" title="company">Consolidate Contractors Company</div>
-                  <img class="company-logo" src="./png/ccc.png">
-              </div>
-              <div class="experience-responsibilities" id="exp1">
-                <ul>
-                  <li>Utilizing advanced work packaging principles to facilitate workplace management and reduce construction costs</li>
-                  <li>Performing early forecasting of work front and preparing material and tools for smooth flow of work</li>
-                  <li>Coordinating with disciplines (Work face planning, engineering, planning and productivity) and client representatives in addition to arranging logistics to request and deliver material to site</li>
-                  <li>Ensuring that the site is properly staffed to perform all material management duties including material receiving, storage, preservation, inventorying and issuing</li>
-                  <li>Identifying contractor responsibilities and scopes of supply, preparing material takeoffs, and following on material procurement</li>
-                </ul>
-              </div>
-              <div class="work-skills" id="wsk1">
-                <div class="work-skills-item">Time Management</div>
-                <div class="work-skills-item">Leadership</div>
-                <div class="work-skills-item">Communication</div>
-                <div class="work-skills-item">Planning</div>
+                <img class="company-logo" src="./png/ccc.png">
               </div>
             </div>
-            <div class="experience-col-left">
+            <div class="experience-responsibilities" id="exp1">
+                <div class="bullet">+</div>
+                <div class="list-item">Utilizing advanced work packaging principles to facilitate workplace management and reduce construction costs</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Performing early forecasting of work front and preparing material and tools for smooth flow of work</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Coordinating with disciplines (Work face planning, engineering, planning and productivity) and client representatives in addition to arranging logistics to request and deliver material to site</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Ensuring that the site is properly staffed to perform all material management duties including material receiving, storage, preservation, inventorying and issuing</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Identifying contractor responsibilities and scopes of supply, preparing material takeoffs, and following on material procurement</div>
+            </div>
+            <div class="work-skills" id="wsk1">
+              <div class="work-skills-item">Time Management</div>
+              <div class="work-skills-item">Leadership</div>
+              <div class="work-skills-item">Communication</div>
+              <div class="work-skills-item">Planning</div>
+            </div>
+            <div class="experience-footing">
               <div class="experience-time-period">Mar 2020 - Jul 2023</div>
               <div class="experience-location" title="location">FPG 3rd Generation Plant, Republic of Kazakhstan</div>
             </div>
-          </div>
-      <!-- Second Experience Block -->
+        </div>
+        <!-- Second Experience Block -->
         <div class="experience-block" onclick="display('exp2')">
-          <div class="experience-col-right">
             <div class="experience-heading">
               <div class="experience-position" title="position">Procurement Engineer</div>
-              <div class="experience-company" title="company">Consolidate Contractors Company</div>
-              <img class="company-logo" src="./png/ccc.png">
+              <div class="experience-company-logo">
+                <div class="experience-company" title="company">Consolidate Contractors Company</div>
+                <img class="company-logo" src="./png/ccc.png">
+              </div>
             </div>
-
             <div class="experience-responsibilities" id="exp2">
-              <ul>
-                <li>Worked on the procurement of permanent material and site consumables including sending requests for quotation, preparing comparison sheets, issuing purchase orders, and following delivery to site</li>
-                <li>Coordinating with specialized subcontractors for timely delivery of material and mobilization of manpower</li>
-                <li>Worked with engineering department for preparing material takeoffs for E&I</li>
-              </ul>
+                <div class="bullet">+</div>
+                <div class="list-item">Worked on the procurement of permanent material and site consumables including sending requests for quotation, preparing comparison sheets, issuing purchase orders, and following delivery to site</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Coordinating with specialized subcontractors for timely delivery of material and mobilization of manpower</div>
+                <div class="bullet">+</div>
+                <div class="list-item">Worked with engineering department for preparing material takeoffs for E&I</div>
             </div>
             <div class="work-skills"  id="wsk2">
               <div class="work-skills-item">Procurement</div>
@@ -152,29 +153,32 @@
               <div class="work-skills-item">Site Engineering</div>
               <div class="work-skills-item">AutoCad</div>
             </div>
-          </div>
-          <div class="experience-col-left">
-            <div class="experience-time-period">Aug 2018 – Feb 2020</div>
-            <div class="experience-location" title="location">Khazzan Central Processing Facility Phase II, Sultanate of Oman</div>
-          </div>
+            <div class="experience-footing">
+              <div class="experience-time-period">Aug 2018 – Feb 2020</div>
+              <div class="experience-location" title="location">Khazzan Central Processing Facility Phase II, Sultanate of Oman</div>
+            </div>
         </div>
 
-      <!-- Third Experience Block -->
+        <!-- Third Experience Block -->
         <div class="experience-block" onclick="display('exp3')">
-          <div class="experience-col-right">
             <div class="experience-heading">
               <div class="experience-position" title="position">E&I Engineer</div>
-              <div class="experience-company" title="company">Consolidate Contractors Company</div>
+              <div class="experience-company-logo">
+                <div class="experience-company" title="company">Consolidate Contractors Company</div>
                 <img class="company-logo" src="./png/ccc.png">
+              </div>
             </div>
             <div class="experience-responsibilities" id="exp3">
-              <ul>
-                <li>Supervising construction activities including installation of switchgear, cabling, building service systems and general electrical works</li>
-                <li>Overseeing project specification, identifying work scope and responsibility matrix, preparing method statements and material approvals</li>
-                <li>Preparing material takeoffs and following on material procurement</li>
-                <li>Liaising with subcontractors for supply of material and manpower to complete specific jobs</li>
-                <li>Preparing progress and productivity reports, managing office documentation and subsystem handover</li>
-              </ul>
+              <div class="bullet">+</div>
+              <div class="list-item">Supervising construction activities including installation of switchgear, cabling, building service systems and general electrical works</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Overseeing project specification, identifying work scope and responsibility matrix, preparing method statements and material approvals</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Preparing material takeoffs and following on material procurement</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Liaising with subcontractors for supply of material and manpower to complete specific jobs</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Preparing progress and productivity reports, managing office documentation and subsystem handover</div>
             </div>
             <div class="work-skills"  id="wsk3">
               <div class="work-skills-item">Office Engineer</div>
@@ -183,100 +187,103 @@
               <div class="work-skills-item">Excel</div>
               <div class="work-skills-item">Outlook</div>
             </div>
-          </div>
-          <div class="experience-col-left">
-            <div class="experience-time-period">Jan 2017 – Jul 2018</div>
-            <div class="experience-location" title="location">Rabab Harweel Integrated Project, Sultanate of Oman</div>
-          </div>
+            <div class="experience-footing">
+              <div class="experience-time-period">Jan 2017 – Jul 2018</div>
+              <div class="experience-location" title="location">Rabab Harweel Integrated Project, Sultanate of Oman</div>
+            </div>
         </div>
 
-      <!-- Fourth Experience Block -->
-      <div class="experience-block" onclick="display('exp4')">
-        <div class="experience-col-right">
-          <div class="experience-heading">
-            <div class="experience-position" title="position">E&I Engineer</div>
-            <div class="experience-company" title="company">Consolidate Contractors Company</div>
-              <img class="company-logo" src="./png/ccc.png">
-          </div>
-          <div class="experience-responsibilities" id="exp4">
-            <ul>
-              <li>Supervising construction activities in substations and field to install electrical equipment including HV and LV switchgear, transformers and busducts, UPS system, building HVAC, cable tray and cabling, instrument process control, F&G, and Telecoms</li>
-              <li>Leading team to ensure proper execution of work as per drawings, project standards and quality requirements</li>
-              <li>Coordinating with other disciplines to ensure readiness of site and complete delivery of work</li>
-              <li>Setting delivery schedules, allocating manpower and resources, monitoring work progress and productivity </li>
-              <li>Attending client meetings to acquire requisites, report progress and meet mechanical completion requirements</li>
-            </ul>
-          </div>
-          <div class="work-skills" id="wsk4">
-            <div class="work-skills-item">Leadership in Action</div>
-            <div class="work-skills-item">Construction</div>
-            <div class="work-skills-item">Supervision</div>
-          </div>
+        <!-- Fourth Experience Block -->
+        <div class="experience-block" onclick="display('exp4')">
+            <div class="experience-heading">
+              <div class="experience-position" title="position">E&I Engineer</div>
+              <div class="experience-company-logo">
+                <div class="experience-company" title="company">Consolidate Contractors Company</div>
+                <img class="company-logo" src="./png/ccc.png">
+              </div>
+            </div>
+            <div class="experience-responsibilities" id="exp4">
+              <div class="bullet">+</div>
+              <div class="list-item">Supervising construction activities in substations and field to install electrical equipment including HV and LV switchgear, transformers and busducts, UPS system, building HVAC, cable tray and cabling, instrument process control, F&G, and Telecoms</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Leading team to ensure proper execution of work as per drawings, project standards and quality requirements</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Coordinating with other disciplines to ensure readiness of site and complete delivery of work</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Setting delivery schedules, allocating manpower and resources, monitoring work progress and productivity</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Attending client meetings to acquire requisites, report progress and meet mechanical completion requirements</div>
+            </div>
+            <div class="work-skills" id="wsk4">
+              <div class="work-skills-item">Leadership in Action</div>
+              <div class="work-skills-item">Construction</div>
+              <div class="work-skills-item">Supervision</div>
+            </div>
+            <div class="experience-footing">
+              <div class="experience-time-period">May 2015 – Dec 2016</div>
+              <div class="experience-location" title="location">Khazzan Central Processing Facility Phase I, Sultanate of Oman</div>
+            </div>
         </div>
-        <div class="experience-col-left">
-          <div class="experience-time-period">May 2015 – Dec 2016</div>
-          <div class="experience-location" title="location">Khazzan Central Processing Facility Phase I, Sultanate of Oman</div>
-        </div>
-      </div>
       </section>
 
       <!-- Projects -->
       <section class="Section" id="projects">
-        <div class="section-heading">Projects</div>
+        <div class="section-heading" id="hd-projects">Projects</div>
         <div class="projects-block">
-          <h2>Coming soon</h2>
+          <div class="projects-heading">
+            <h2>Coming soon</h2>
+          </div>
           <div><a href="./todoList/todolist.html">To Do List</a></div>
         </div>
       </section>
 
       <!-- Academic Background -->
       <section class="Section" id="education">
-        <div class="section-heading">Education</div>
+        <div class="section-heading" id="hd-education">Education</div>
         <!-- First Eduction block -->
         <div class="academics-block" onclick="display('acd1')">
-          <div class="academics-col-right">
-            <div class="academics-heading">
-              <div class="academics-position" title="position">BS in Electrical and Computer Engineering</div>
+          <div class="academics-heading">
+            <div class="academics-position" title="position">BS in Electrical and Computer Engineering</div>
+            <div class="experience-company-logo">
               <div class="academics-location" title="company">American University of Beirut</div>
               <img class="company-logo" src="./png/aub.png">
             </div>
-            <div class="academics-achievements" id="acd1">
-                <ul>
-                  <li>Attended courses in industrial electrification, control systems, electronics and signal processing, programing, networking, and communications</li>
-                  <li>Delivered graduation project on signal interference detection and elimination in GSM systems</li>
-                </ul>
-            </div>
-            <div class="work-skills" id="ask1">
-              <div class="work-skills-item">Programming</div>
-              <div class="work-skills-item">Architecture</div>
-              <div class="work-skills-item">Networking</div>
-              <div class="work-skills-item">Communication</div>
-              <div class="work-skills-item">Power Systems</div>
-              <div class="work-skills-item">C++</div>
-              <div class="work-skills-item">Java</div>
-              <div class="work-skills-item">SQL</div>
-            </div>
           </div>
-          <div class="academics-col-left">
+          <div class="academics-achievements" id="acd1">
+              <div class="bullet">+</div>
+              <div class="list-item">Attended courses in industrial electrification, control systems, electronics and signal processing, programing, networking, and communications</div>
+              <div class="bullet">+</div>
+              <div class="list-item">Delivered graduation project on signal interference detection and elimination in GSM systems</div>
+          </div>
+          <div class="work-skills" id="ask1">
+            <div class="work-skills-item">Programming</div>
+            <div class="work-skills-item">Architecture</div>
+            <div class="work-skills-item">Networking</div>
+            <div class="work-skills-item">Communication</div>
+            <div class="work-skills-item">Power Systems</div>
+            <div class="work-skills-item">C++</div>
+            <div class="work-skills-item">Java</div>
+            <div class="work-skills-item">SQL</div>
+          </div>
+          <div class="academics-footing">
             <div class="academics-period">Sep 2010 – Jun 2014</div>
             <div class="experience-location" title="location">Beirut, Lebanon</div>
           </div>
         </div>
         <!-- Second Eduction block -->
         <div class="academics-block" onclick="display('acd2')">
-          <div class="academics-col-right">
-            <div class="academics-heading">
-              <div class="academics-position" title="position">Research Assistant</div>
+          <div class="academics-heading">
+            <div class="academics-position" title="position">Research Assistant</div>
+            <div class="experience-company-logo">
               <div class="academics-location" title="company">University of Wisconsin, Madison</div>
-                <img class="company-logo" src="./png/uw.png">
-            </div>
-            <div class="academics-achievements" id="acd2">
-                <ul>
-                  <li>Updated software packages and developed testing tools that ensure robust and reliable output</li>
-                </ul>
+              <img class="company-logo" src="./png/uw.png">
             </div>
           </div>
-          <div class="academics-col-left">
+          <div class="academics-achievements" id="acd2">
+            <div class="bullet">+</div>
+            <div class="list-item">Updated software packages and developed testing tools that ensure robust and reliable output</div>
+          </div>
+          <div class="academics-footing">
             <div class="academics-period">Jun 2013 – Aug 2013</div>
             <div class="experience-location" title="location">Wisconsin, USA</div>
           </div>
@@ -285,8 +292,7 @@
 
       <!-- Contacts -->
       <section class="Section" id="contacts">
-        <div class="contacts-section">
-          <div class="section-heading">Contacts</div>
+        <div class="section-heading" id="hd-contacts">Contacts</div>
           <div class="contacts-block">
             <div class="contacts">
               <img src="./icons/mobile.svg">+77052035486</div>
@@ -294,10 +300,9 @@
               <img src="./icons/mail.svg"><a href = "mailto: mrabbani@outlook.com">mrabbani@outlook.com</a>
             </div>
             <div class="contacts">
-              <img src="./icons/engineer.svg">LinkedIn: <a href="www.linkedin.com/in/mohamadrabbani">Mohamad Rabbani</a></div>
+              <img src="./icons/linkedin.svg"><a target="_blank" href="https://www.linkedin.com/in/mohamadrabbani/">Mohamad Rabbani</a></div>
             <div class="contacts">
-              <img src="./icons/address.svg">Address: Atyrau, Kazakhstan</div>
-        </div>
+              <img src="./icons/address.png">Atyrau, Kazakhstan</div>
       </section>
     </div>
   </div>
@@ -310,7 +315,7 @@
           if(id === "title-contacts"){
             element.style.display = "flex";
           } else {
-            element.style.display = "block";
+            element.style.display = "grid";
             if(id.includes("exp")){
               document.getElementById(id.replace("exp","wsk")).style.display = "flex";
             } else {
@@ -333,11 +338,12 @@
     const sections = document.querySelectorAll(".Section");
 
     // Add an event listener listening for scroll
-    window.addEventListener("scroll", navHighlighter);
+    //window.addEventListener("scroll", navHighlighter);
+    window.onscroll = function(){navHighlighter()};
 
     function navHighlighter() {
       // Get current scroll position
-      let scrollY = window.pageYOffset+400;
+      let scrollY = window.pageYOffset+350;
       console.log("scroll");
       // Now we loop through sections to get height, top and ID values for each
       sections.forEach(current => {
@@ -348,7 +354,7 @@
         - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
         - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
         */
-       console.log(scrollY+" "+sectionTop+" "+sectionHeight+" "+current.getBoundingClientRect().top);
+       //console.log(scrollY+" "+sectionTop+" "+sectionHeight+" "+current.getBoundingClientRect().top);
         if (
           (scrollY >= sectionTop) && (scrollY <= (sectionTop + sectionHeight))
         ){
@@ -357,6 +363,30 @@
         } else {
           document.getElementById("link-"+sectionId).classList.remove("active");
         }
+        /*
+        if (
+          (scrollY-350 >= sectionTop) && (scrollY-350 <= (sectionTop + sectionHeight))
+        ){
+          document.getElementById("hd-"+sectionId).classList.add("sticky");
+        } else {
+          document.getElementById("hd-"+sectionId).classList.remove("sticky");
+        }
+        */
+
+        if (
+          (scrollY+100 >= sectionTop) && (scrollY+100 <= (sectionTop + sectionHeight))
+        ){
+          document.getElementById("hd-"+sectionId).classList.remove("sticky");
+        }
+
+        if (
+          (scrollY-350 >= sectionTop) && (scrollY-350 <= (sectionTop + sectionHeight))
+        ){
+          document.getElementById("hd-"+sectionId).classList.add("sticky");
+        } else {
+          document.getElementById("hd-"+sectionId).classList.remove("sticky");
+        }
+        
     });
   } 
 
