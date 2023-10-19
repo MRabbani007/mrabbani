@@ -1,9 +1,9 @@
 :root{
-  --fontsize-h1: max(calc(30px + 0.39vw),30px);
-  --fontsize-h2: max(calc(25px + 0.39vw),20px);
-  --fontsize-h3: max(calc(14px + 0.39vw),18px);
-  --fontsize-h4: max(calc(10px + 0.39vw),14px);
-  --fontsize-h5: max(calc(9px + 0.39vw),14px);
+  --fontsize-h1: max(calc(35px + 0.4vw),35px);
+  --fontsize-h2: max(calc(28px + 0.4vw),28px);
+  --fontsize-h3: max(calc(20px + 0.4vw),20px);
+  --fontsize-h4: max(calc(15px + 0.4vw),15px);
+  --fontsize-h5: max(calc(10px + 0.4vw),10px);
 } 
 
 * {
@@ -80,6 +80,7 @@ p {
 .links {
   display: flex;
   align-items: center;
+  font-size: var(--fontsize-h4);
   padding: 0.62vw;
   background-color: rgb(255, 255, 255);
 }
@@ -198,8 +199,6 @@ p {
   background-color: rgba(255, 255, 255, 0.9);
   margin: 0;
   padding: 1vw;
-  border-radius: 0 0 0.3vw 0.3vw;
-  transition: all 0.5s linear 0.1s;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -219,22 +218,19 @@ p {
 .skills-item img {
   width: 6vw;
   max-height: 6vw;
-  min-width: 60px;  
+  min-width: 60px;
   min-height: 60px;
   margin: 1vw 0 -1vw;
 }
 
-.experience-block, .academics-block {
+.experience-block, .projects-block, .academics-block, .contacts-block {
   width: 70%;
   background-color: rgba(255, 255, 255, 1);
   border: 0.2vw solid rgba(230, 230, 230, 0.8);
   margin: 2vw auto;
+  padding: 0 1vw;
   box-shadow: 2px 2px #adadad;
   transition: all 0.5s linear 0.1s;
-}
-
-.experience-block ul, .academics-block ul {
-  padding-left: 15px;
 }
 
 .section-title2 {
@@ -249,7 +245,7 @@ p {
   display: flex;
   text-align: justify;
   text-overflow: ellipsis;
-  padding: 1vw;
+  padding: 1vw 0;
   border-top: 1px solid gray;
   flex-direction: row;
 }
@@ -257,33 +253,9 @@ p {
 .experience-heading, .academics-heading {
   border-bottom: 1px solid gray;
   padding: 1vw 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 6fr 8fr 0.5fr;
   align-items: center;
-}
-
-.company-logo {
-  width: 5vw;
-  min-width: 50px;
-  vertical-align: middle;
-}
-
-.experience-col-right, .academics-col-right {
-  padding: 0.62vw;
-  text-overflow: ellipsis;
-}
-
-.experience-responsibilities, .academics-achievements {
-  padding: 1.25vw;
-  color: black;
-  display: block;
-  margin: 0;
-}
-
-.experience-responsibilities li, .academics-achievements li {
-  margin: 1vw 0;
-  font-size: var(--fontsize-h3);
 }
 
 .experience-position, .experience-company, .academics-position, .academics-location {
@@ -292,21 +264,44 @@ p {
   padding: 0 1vw;
 }
 
+.company-logo {
+  width: 5vw;
+  min-width: 50px;
+  vertical-align: middle;
+}
+
+.experience-responsibilities, .academics-achievements {
+  padding: 1.25vw 1.25vw 0;
+  color: black;
+  display: block;
+  margin: 0;
+}
+
+.experience-block ul, .academics-block ul {
+  padding-left: 15px;
+  margin: 0;
+}
+
+.experience-responsibilities li, .academics-achievements li {
+  margin: 1vw 0;
+  font-size: var(--fontsize-h3);
+}
+
 .experience-time-period, .academics-period {
 padding: 0 1vw;
 border-right: 1px solid gray;
-font-size: var(--fontsize-5);
+font-size: var(--fontsize-h4);
 }
 
 .experience-location {
   padding: 0 1vw;
-  font-size: var(--fontsize-5);
-  color: rgb(0, 0, 177);
-}
+  font-size: var(--fontsize-h4);
+  }
 
 .work-skills {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 1vw 1vw;
 }
 
 .work-skills-item {
@@ -319,28 +314,6 @@ font-size: var(--fontsize-5);
 
 .work-skills-item:hover {
   background-color: rgb(218, 218, 218);
-}
-
-.projects-block{
-  width: 70%;
-  margin: 1vw auto;
-  padding: 1vw;
-  background-color: white;
-}
-
-.contacts-container {
-  background-color: rgba(255, 255, 255,0.9);
-  border: 0.2vw solid rgba(173, 173, 173, 0.301);
-  padding: 3.75vw 1.25vw 6.25vw;
-  width: 70%;
-  margin: 1vw auto;
-  box-shadow: 2px 2px #adadad;
-  transition: all 0.5s linear 0.1s;
-}
-
-.contacts-container:hover{
-  background-color: rgba(255, 255, 255,1);
-  transition: all 0.5s linear 0.1s;
 }
 
 .contacts {
@@ -364,7 +337,7 @@ font-size: var(--fontsize-5);
   .section-title2 {
     display: block;
   }
-  .experience-block, .academics-block, .contacts-container, .about, .projects-block,.skills-grid {
+  .experience-block, .academics-block, .contacts-block, .about, .projects-block,.skills-grid {
     width: 90%;
   }
   .main-container {
