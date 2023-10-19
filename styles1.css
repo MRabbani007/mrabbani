@@ -219,7 +219,8 @@ p {
 .skills-item img {
   width: 6vw;
   max-height: 6vw;
-  min-width: 60px;
+  min-width: 60px;  
+  min-height: 60px;
   margin: 1vw 0 -1vw;
 }
 
