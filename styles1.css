@@ -277,7 +277,8 @@ p {
 }
 
 .experience-responsibilities li, .academics-achievements li {
-  margin: 2vw 0;
+  margin: 1vw 0;
+  font-size: var(--fontsize-h3);
 }
 
 .experience-position, .experience-company, .academics-position, .academics-location {
@@ -298,10 +299,6 @@ font-size: var(--fontsize-5);
   color: rgb(0, 0, 177);
 }
 
-.experience-col-right li, .academics-col-right li {
-  font-size: var(--fontsize-5);
-}
-
 .work-skills {
   display: flex;
   flex-wrap: wrap;
@@ -310,7 +307,7 @@ font-size: var(--fontsize-5);
 .work-skills-item {
   background-color: whitesmoke;
   color: black;
-  margin: 1vw;
+  margin: 0.5vw;
   padding: 1vw;
   font-size: var(--fontsize-h4);
 }
