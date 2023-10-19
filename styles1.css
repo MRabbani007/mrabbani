@@ -1,3 +1,4 @@
+/* font sizing variables*/
 :root{
   --fontsize-h1: max(calc(35px + 0.4vw),35px);
   --fontsize-h2: max(calc(28px + 0.4vw),28px);
@@ -21,8 +22,8 @@ a {
   color: black;
 }
 p {
-  padding: 0;
-  margin: 2vw 0;
+  padding: 10px;
+  margin: 0;
 }
 
 .main-container {
@@ -50,10 +51,6 @@ p {
 }
 .sub-title {
   font-size: var(--fontsize-h4);
-}
-
-.section-title2 {
-  margin: 5vh 0;
 }
 
 .navigator {
@@ -96,6 +93,18 @@ p {
   background-color: rgba(231, 231, 231, 0.7);
 }
 
+.section-title2 {
+  display: none;
+  margin: 1vw auto;
+  padding: 0;
+  width: 70%;
+  text-align: center;
+}
+
+.section-title2 .section-title {
+  font-size: var(--fontsize-h2);
+}
+
 .background {
   height: 100vh;
   width: 100%;
@@ -127,19 +136,29 @@ p {
   margin: 0;
 }
 
-.about {
-  width: 70%;
-  margin: 2vw auto;
-  text-align: justify;
-  padding: 30px;
-  font-size: var(--fontsize-h2);
-  background-color: rgb(255, 255, 255);
-  box-shadow: 2px 2px #adadad;
+.section-heading{
+  font-family: 'Raleway', sans-serif;
+  font-size: var(--fontsize-h1);
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  padding: 20px 2.5vw;
+  background-color: rgb(1, 134, 79);
+  /*
+  background-image: linear-gradient(to right, rgba(1, 0, 90, 0.8),rgba(200, 200, 200, 0.7));
+  */
+}
+.section-heading:hover{
+  font-weight: bold;
 }
 
-.about:hover {
-  background-color: rgba(255, 255, 255, 0.726);
-  transition: all 0.51s linear 0.1s;
+.about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 1);
+  border: 0.2vw solid rgba(230, 230, 230, 0.8);
+  margin: 1vw auto;
+  padding: 1vw;
+  box-shadow: 2px 2px #adadad;
+  transition: all 0.5s linear 0.1s;
 }
 
 .about-statement {
@@ -157,32 +176,6 @@ p {
   color: black;
 }
 
-.section-heading{
-  font-family: 'Raleway', sans-serif;
-  font-size: var(--fontsize-h1);
-  font-weight: 400;
-  color: rgb(255, 255, 255);
-  padding: 1.5vw 2.5vw;
-  background-color: rgb(1, 134, 79);
-  /*
-  background-image: linear-gradient(to right, rgba(1, 0, 90, 0.8),rgba(200, 200, 200, 0.7));
-  */
-}
-.section-heading:hover{
-  font-weight: bold;
-}
-
-.skills-grid {
-  width: 70%;
-  margin: auto;
-}
-
-.skills-box {
-  margin: 2vw 0;
-  background-color: rgb(245, 245, 245);
-  box-shadow: 2px 2px #adadad;
-}
-
 /* skills & competencies */
 .skills-header {
   background-color: rgb(255, 255, 255);
@@ -193,22 +186,9 @@ p {
   font-size: var(--fontsize-h2);
 }
 
-.skills-body {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(255, 255, 255, 0.9);
-  margin: 0;
-  padding: 1vw;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .skills-item {
-  font-family: monospace;
   font-size: 18px;
-  margin: 1vw;
-  padding: 1vw;
+  margin: 15px;
 }
 
 .skills-item:hover {
@@ -220,71 +200,67 @@ p {
   max-height: 6vw;
   min-width: 60px;
   min-height: 60px;
-  margin: 1vw 0 -1vw;
+  margin: 0 0 -1vw;
 }
 
-.experience-block, .projects-block, .academics-block, .contacts-block {
-  width: 70%;
-  background-color: rgba(255, 255, 255, 1);
-  border: 0.2vw solid rgba(230, 230, 230, 0.8);
-  margin: 2vw auto;
-  padding: 0 1vw;
-  box-shadow: 2px 2px #adadad;
-  transition: all 0.5s linear 0.1s;
-}
-
-.section-title2 {
-  display: none;
-  margin: 1vw auto;
-  padding: 0;
-  width: 70%;
+#technical-skills .skills-body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 1vw;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  font-family: monospace;
 }
 
-.experience-col-left, .academics-col-left {
+.experience-footing, .academics-footing {
   display: flex;
   text-align: justify;
   text-overflow: ellipsis;
-  padding: 1vw 0;
+  padding-top: 10px;
   border-top: 1px solid gray;
   flex-direction: row;
 }
 
 .experience-heading, .academics-heading {
   border-bottom: 1px solid gray;
-  padding: 1vw 0;
-  display: grid;
-  grid-template-columns: 6fr 8fr 0.5fr;
+  padding: 0 15px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* vertically align items */
+} 
+
+/* wrapper for company name & logo */
+.experience-company-logo {
+  display: flex;
   align-items: center;
 }
 
 .experience-position, .experience-company, .academics-position, .academics-location {
   color: rgb(23, 6, 175);
   font-size: var(--fontsize-h3);
-  padding: 0 1vw;
 }
 
 .company-logo {
-  width: 5vw;
-  min-width: 50px;
-  vertical-align: middle;
+  width: 80px;
+  height: 60px;
 }
 
 .experience-responsibilities, .academics-achievements {
-  padding: 1.25vw 1.25vw 0;
   color: black;
-  display: block;
+  display: grid;
+  grid-template-columns: 30px 1fr;
   margin: 0;
+  padding: 10px 0;
 }
 
-.experience-block ul, .academics-block ul {
-  padding-left: 15px;
-  margin: 0;
-}
-
-.experience-responsibilities li, .academics-achievements li {
-  margin: 1vw 0;
+.bullet, .list-item {
+  padding: 10px;
   font-size: var(--fontsize-h3);
+  text-align: justify;
+  line-height: 30px;
 }
 
 .experience-time-period, .academics-period {
@@ -307,9 +283,10 @@ font-size: var(--fontsize-h4);
 .work-skills-item {
   background-color: whitesmoke;
   color: black;
-  margin: 0.5vw;
-  padding: 1vw;
+  margin: 10px;
+  padding: 10px 15px;
   font-size: var(--fontsize-h4);
+  box-shadow: 3px 1px blue;
 }
 
 .work-skills-item:hover {
@@ -325,7 +302,8 @@ font-size: var(--fontsize-h4);
 }
 
 .contacts img {
-  margin: 0 10px;
+  margin: 0 20px;
+  width: 40px;
 }
 
 @media (max-width:900px){
@@ -337,7 +315,8 @@ font-size: var(--fontsize-h4);
   .section-title2 {
     display: block;
   }
-  .experience-block, .academics-block, .contacts-block, .about, .projects-block,.skills-grid {
+
+  .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
     width: 90%;
   }
   .main-container {
@@ -349,4 +328,14 @@ font-size: var(--fontsize-h4);
   background-color: rgb(221, 221, 221);
   font-weight: 600;
   border-left: 0.5vw solid rgb(0, 97, 0);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .main-container {
+  padding-top: 180px;
 }
