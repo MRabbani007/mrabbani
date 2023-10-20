@@ -99,6 +99,8 @@ p {
   padding: 0;
   width: 70%;
   text-align: center;
+  align-items: center;
+  transition: all 1.5s linear 0.1s;
 }
 
 .section-title2 .section-title {
@@ -143,6 +145,9 @@ p {
   color: rgb(255, 255, 255);
   padding: 20px 2.5vw;
   background-color: rgb(1, 134, 79);
+  position: -webkit-sticky; /* safari */
+  position: sticky;
+  top: 0;
   /*
   background-image: linear-gradient(to right, rgba(1, 0, 90, 0.8),rgba(200, 200, 200, 0.7));
   */
@@ -154,16 +159,16 @@ p {
 .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
   width: 80%;
   background-color: rgba(255, 255, 255, 1);
-  border: 0.2vw solid rgba(230, 230, 230, 0.8);
-  margin: 1vw auto;
-  padding: 1vw;
+  border: 2px solid rgba(230, 230, 230, 0.8);
+  margin: 15px auto;
+  padding: 15px;
   box-shadow: 2px 2px #adadad;
   transition: all 0.5s linear 0.1s;
 }
 
 .about-statement {
-  padding: 1vw;
-  margin: 0 0 1vw;
+  padding: 5px;
+  margin: 0 15px 1vw;
   font-size: var(--fontsize-h2);
   background-color: rgb(212, 212, 212);
   border-left: 5px solid rgb(1, 134, 79);
@@ -296,9 +301,9 @@ font-size: var(--fontsize-h4);
 .contacts {
   display: flex;
   align-items: center;
-  padding: 0 1.25vw;
+  padding: 0 10px;
   font-size: var(--fontsize-h3);
-  margin: 2.8vh auto;
+  margin: 3vh auto;
 }
 
 .contacts img {
@@ -313,7 +318,7 @@ font-size: var(--fontsize-h4);
   }
   /*Display title on top*/
   .section-title2 {
-    display: block;
+    display: flex;
   }
 
   .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
@@ -322,20 +327,16 @@ font-size: var(--fontsize-h4);
   .main-container {
     display: flex;
   }
+  .about-statement, .about-text {
+    font-size: var(--fontsize-h3);
+  }
+  .experience-responsibilities, .academics-achievements {
+    font-size: var(--fontsize-h5);
+  }
 }
 
 .active {
   background-color: rgb(221, 221, 221);
   font-weight: 600;
   border-left: 0.5vw solid rgb(0, 97, 0);
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.sticky + .main-container {
-  padding-top: 180px;
 }
