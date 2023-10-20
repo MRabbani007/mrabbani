@@ -11,7 +11,8 @@ let mytodoList = [];
   {
       itemID: setItemID(),
       itemDescription : description,
-      itemDueDate : dueDate
+      itemDueDate : dueDate,
+      itemStatus : "done" / "open"
   }
 */
 
@@ -59,7 +60,8 @@ function addTodoItem (selectedListID, description, dueDate){
     mytodoList[getListIndex(selectedListID)].todoListItem.push({
       itemID: setItemID(),
       itemDescription : description,
-      itemDueDate : dueDate
+      itemDueDate : dueDate,
+      itemStatus : "open"
     });
   }
 
@@ -99,32 +101,31 @@ function createList (){
 }
 
 function openList (selectedListID) {
-  let index = getListIndex(selectedListID);
+  // check if list already open
+  if(!document.getElementById("cont-"+selectedListID)){
+    let index = getListIndex(selectedListID);
+    let todoListHTML = `
+      <div class="list-container" id="cont-${selectedListID}">
+        <div class="todolist-header">
+          <div class="selected-list-name">${mytodoList[index].todoListName}</div>
+          <div class="selected-list-close" onclick="closeList(${selectedListID})"><img class="icons" src="./icons/cancel.png"></div>
+        </div>
+        <div class="todo-input-grid">
+          <input placeholder="Todo description" class="name-input" id="input-${selectedListID}">
+          <input type="date" class="due-date-input">
+          <div onclick="addTodo(${selectedListID})" class="add-todo-button" id="addButton-${selectedListID}">Add</div>
+        </div>
+        <div class="js-todo-list todo-grid" id="grid-${selectedListID}"></div>
+      </div>
+    `;
 
-  //if(!mytodoList[index]){return;}
+    document.querySelector('.active-list-container').innerHTML += todoListHTML;
+    document.querySelector('.active-list-container').style.display = "flex";
 
-  let todoListHTML = `
-    <div class="selected-list-name">${mytodoList[index].todoListName}</div>
-    <div class="todo-input-grid">
-      <input placeholder="Todo description" class="name-input" id="input-${selectedListID}">
-      <input type="date" class="due-date-input">
-      <button onclick="addTodo(${selectedListID})" class="add-todo-button" id="addButton-${selectedListID}">Add</button>
-    </div>
-    <div class="js-todo-list todo-grid"></div>
-  `;
-
-  document.querySelector('.container').innerHTML = todoListHTML;
-  document.querySelector('.container').style.display = "block";
-  /*
-  document.querySelector('.name-input').addEventListener('keypress',(event)=>{
-    if (event.key === 'Enter') {
-      createList(addTodo(selectedListID));
+    if((mytodoList[index]).todoListItem.length != 0){
+      renderTodoList(selectedListID);
+      //createEventListener();
     }
-  });
-*/
-  if((mytodoList[index]).todoListItem.length != 0){
-    renderTodoList(selectedListID);
-    createEventListener();
   }
 }
 
@@ -149,27 +150,7 @@ function addTodo(selectedListID) {
   renderTodoList(selectedListID);
 }
 
-function renderTodoList (selectedListID){
-  let listIndex = getListIndex(selectedListID);
-  let todoListHTML = '';
-
-  ((mytodoList[listIndex]).todoListItem).forEach((todoObject, itemIndex)=>{
-    // Destructuring
-    const { itemID, itemDescription, itemDueDate } = todoObject;
-    const html = `
-    <div class="todo-item" id="${itemID}">
-    <img id="img-${itemID}" class="checked" src="unchecked.png" onclick="clicked('img-${itemID}')">
-    <div class="todo-item-subcontainer" id="item-${itemID}">${itemDescription}</div>
-    <div>${itemDueDate}</div>
-    <button class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})">Edit</button>
-    <button class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})">X</button>
-    </div>`;
-    todoListHTML += html;
-  });
-
-   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-}
-
+// generate HTML and display list names
 function renderListNames (){
   let todoListNames = '';
   if(mytodoList.length != 0){
@@ -177,8 +158,8 @@ function renderListNames (){
       todoListNames += `
       <div class="display-list" id='list-${mytodoList[i].todoListId}'>
         <div class="list-name" onclick='openList(${mytodoList[i].todoListId})'>${mytodoList[i].todoListName}</div>
-        <button class="edit-list" onclick="editList(${mytodoList[i].todoListId})">Edit</button>
-        <button class="delete-list" onclick="confirmDeleteList(${mytodoList[i].todoListId})">X</button>
+        <div class="edit-list" onclick="editList(${mytodoList[i].todoListId})"><img class="icons" src="./icons/edit.png"></div>
+        <div class="delete-list" onclick="confirmDeleteList(${mytodoList[i].todoListId})"><img class="icons" src="./icons/delete.png"></div>
       </div>`;
     }
   }
@@ -186,16 +167,57 @@ function renderListNames (){
   document.querySelector('.display-lists-container').innerHTML = todoListNames;
 }
 
-function clicked (id){
-  if (document.getElementById(id).src.includes("unchecked.png")){
-    document.getElementById(id).src = 'checked.png';
-    document.getElementById(id.replace('img','item')).style.textDecoration = "line-through";
-    document.getElementById(id.replace('img-','')).style.backgroundColor = "rgba(93, 241, 118, 0.747)";
+// generate HTML & display todo List content
+function renderTodoList (selectedListID){
+  let listIndex = getListIndex(selectedListID);
+  let todoListHTML = '';
+  let statusIcon = "./icons/unchecked.png";
+  let todoClass = "todo-item-open";
+
+  ((mytodoList[listIndex]).todoListItem).forEach((todoObject, itemIndex)=>{
+    // Destructuring
+    const { itemID, itemDescription, itemDueDate, itemStatus } = todoObject;
+    if(itemStatus == "done"){
+      statusIcon = "./icons/checked.png";
+      todoClass = "todo-item-done";
+    } else if (itemStatus == "open") {
+      statusIcon = "./icons/unchecked.png";
+      todoClass = "todo-item-open";
+    }
+    const html = `
+    <div class="todo-item ${todoClass}" id="${itemID}">
+      <img id="img-${itemID}" class="icons" src="${statusIcon}" onclick="toggleCompleted(${selectedListID},${itemID})">
+      <div class="todo-item-description" id="item-${itemID}">${itemDescription}</div>
+      <div class="todo-item-duedate">${itemDueDate}</div>
+      <div class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})"><img class="icons" src="./icons/edit.png"></div>
+      <div class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})"><img class="icons" src="./icons/delete.png"></div>
+    </div>`;
+    todoListHTML += html;
+  });
+
+   document.getElementById("grid-"+selectedListID).innerHTML = todoListHTML;
+}
+
+function toggleCompleted (selectedListID, itemID){
+  if (document.getElementById("img-"+itemID).src.includes("unchecked.png")){
+    // mark completed
+    mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)].itemStatus = "done";
+    document.getElementById("img-"+itemID).src = './icons/checked.png';
+    document.getElementById(itemID).classList.remove("todo-item-open");
+    document.getElementById(itemID).classList.add("todo-item-done");
+    // document.getElementById("item-"+itemID).style.textDecoration = "line-through";
+    // document.getElementById(itemID).style.backgroundColor = "rgba(93, 241, 118, 0.747)";
   } else { 
-    document.getElementById(id).src = 'unchecked.png';
-    document.getElementById(id.replace('img-','')).style.backgroundColor = "rgba(205, 255, 238, 0.747)";
-    document.getElementById(id.replace('img','item')).style.textDecoration = "none";
+    // mark uncomplete
+    mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)].itemStatus = "open";
+    document.getElementById("img-"+itemID).src = './icons/unchecked.png';
+    document.getElementById(itemID).classList.remove("todo-item-done");
+    document.getElementById(itemID).classList.add("todo-item-open");
+    // document.getElementById("item-"+itemID).style.textDecoration = "none";
+    // document.getElementById(itemID).style.backgroundColor = "rgba(205, 255, 238, 0.747)";
   }
+  console.log(mytodoList[getListIndex(selectedListID)].todoListItem);
+  save();
 }
 
 function deleteTodoItem (selectedListID, itemID){
@@ -217,8 +239,12 @@ function deleteList (selectedListID){
   //renderListNames();
   
   if((document.querySelector('.name-input').id).replace("input-","") === (selectedListID+"")){
-    document.querySelector('.container').style.display = "none";
+    closeList(selectedListID);
   }
+}
+
+function closeList(selectedListID){
+  document.getElementById("cont-"+selectedListID).remove();
 }
 
 function confirmDeleteItem (selectedListID, itemID){
@@ -245,24 +271,22 @@ function createEventListener (){
 }
 
 function plusToggle(){
-  if(document.querySelector('.create-list').style.visibility == 'hidden'){
-    document.querySelector('.create-list').style.visibility = 'visible';
+  if(document.querySelector('.create-list').style.display == 'none'){
     document.querySelector('.create-list').style.display = 'flex';
-    document.querySelector('.create-list-plus').innerHTML = '-';
+    document.querySelector('.create-list-plus img').src = "./icons/add-hide.png";
   }
   else {
-    document.querySelector('.create-list').style.visibility = 'hidden';
     document.querySelector('.create-list').style.display = 'none';
-    document.querySelector('.create-list-plus').innerHTML = '+';
+    document.querySelector('.create-list-plus img').src = "./icons/add-show.png";
   }
 }
 
 function editList(selectedListID){
   let editListHTML = `
     <input class="edit-list-name" id="edit-list-name-${selectedListID}" value="${mytodoList[getListIndex(selectedListID)].todoListName}">
-    <button class="edit-list-button" onclick="saveListName(${selectedListID})">Save</button>
-    <button class="edit-list-button" onclick="cancelListName(${selectedListID})">Cancel</button>
-    <button class="delete-list" onclick="confirmDeleteList(${selectedListID})">X</button>
+    <div class="edit-list-button" onclick="saveListName(${selectedListID})"><img class="icons" src="./icons/save.png"></div>
+    <div class="edit-list-button" onclick="cancelListName(${selectedListID})"><img class="icons" src="./icons/cancel.png"></div>
+    <div class="delete-list-button" onclick="confirmDeleteList(${selectedListID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   document.getElementById("list-"+selectedListID).innerHTML = editListHTML;
 }
@@ -276,8 +300,8 @@ function saveListName(selectedListID){
   }
   let editListHTML = `
     <div class="list-name" onclick='openList(${selectedListID})'>${mytodoList[getListIndex(selectedListID)].todoListName}</div>
-    <button class="edit-list" onclick="editList(${selectedListID})">edit</button>
-    <button class="delete-list" onclick="confirmDeleteList(${selectedListID})">X</button>
+    <div class="edit-list" onclick="editList(${selectedListID})"><img class="icons" src="./icons/edit.png"></div>
+    <div class="delete-list" onclick="confirmDeleteList(${selectedListID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   document.getElementById("list-"+selectedListID).innerHTML = editListHTML;
 }
@@ -285,26 +309,25 @@ function saveListName(selectedListID){
 function cancelListName(selectedListID){
   let editListHTML = `
     <div class="list-name" onclick='openList(${selectedListID})'>${mytodoList[getListIndex(selectedListID)].todoListName}</div>
-    <button class="edit-list" onclick="editList(${selectedListID})">edit</button>
-    <button class="delete-list" onclick="confirmDeleteList(${selectedListID})">X</button>
+    <div class="edit-list" onclick="editList(${selectedListID})"><img class="icons" src="./icons/edit.png"></div>
+    <div class="delete-list" onclick="confirmDeleteList(${selectedListID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   document.getElementById("list-"+selectedListID).innerHTML = editListHTML;
 }
 
 function editItem(selectedListID, itemID){
   let editInputHTML = `
-  <img id="img-${itemID}" class="checked" src="unchecked.png" onclick="clicked('img-${itemID}')">
+  <img id="img-${itemID}" class="icons" src="./icons/unchecked.png" onclick="clicked('img-${itemID}')">
   <input class="edit-item-name" id="edit-item-desc-${itemID}" value="${mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)].itemDescription}">
   <input type="date" class="edit-date" id="edit-date-${itemID}">
-  <button class="edit-todo-button" id="edit-save-${itemID}" onclick="editApply(${selectedListID},${itemID})">Save</button>
-  <button class="edit-todo-button" id="edit-cancel-${itemID}" onclick="editCancel(${selectedListID},${itemID})">Cancel</button>
-  <button class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})">X</button>
+  <div class="edit-todo-button" id="edit-save-${itemID}" onclick="editApply(${selectedListID},${itemID})"><img class="icons" src="./icons/save.png"></div>
+  <div class="edit-todo-button" id="edit-cancel-${itemID}" onclick="editCancel(${selectedListID},${itemID})"><img class="icons" src="./icons/cancel.png"></div>
+  <div class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   
   document.getElementById(itemID).innerHTML = editInputHTML;
-  document.getElementById(itemID).style.gridTemplateColumns = "1fr 12fr 6fr 4fr 4fr 1fr";
   
-  document.getElementById("edit-date-"+itemID).value = mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)].dueDate;
+  document.getElementById("edit-date-"+itemID).value = mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)].itemDueDate;
 }
 
 function editApply(selectedListID, itemID){
@@ -319,11 +342,11 @@ function editApply(selectedListID, itemID){
     save();
   }
   let edithtml = `
-    <img id="img-${itemID}" class="checked" src="unchecked.png" onclick="clicked('img-${itemID}')">
-    <div class="todo-item-subcontainer" id="item-${itemID}">${item.itemDescription}</div>
-    <div>${item.itemDueDate}</div>
-    <button class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})">edit</button>
-    <button class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})">X</button>
+    <img id="img-${itemID}" class="icons" src="./icons/unchecked.png" onclick="clicked('img-${itemID}')">
+    <div class="todo-item-description" id="item-${itemID}">${item.itemDescription}</div>
+    <div class="todo-item-duedate">${item.itemDueDate}</div>
+    <div class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})"><img class="icons" src="./icons/edit.png"></div>
+    <div class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   document.getElementById(itemID).innerHTML = edithtml;
   document.getElementById(itemID).style.gridTemplateColumns = "0.25fr 2.25fr 1.25fr 0.25fr 0.15fr";
@@ -332,11 +355,11 @@ function editApply(selectedListID, itemID){
 function editCancel(selectedListID, itemID){
   let item = mytodoList[getListIndex(selectedListID)].todoListItem[getItemIndex(selectedListID,itemID)];
   let editHTML = `
-    <img id="img-${itemID}" class="checked" src="unchecked.png" onclick="clicked('img-${itemID}')">
-    <div class="todo-item-subcontainer" id="item-${itemID}">${item.itemDescription}</div>
-    <div>${item.itemDueDate}</div>
-    <button class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})">edit</button>
-    <button class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})">X</button>
+    <img id="img-${itemID}" class="icons" src="./icons/unchecked.png" onclick="clicked('img-${itemID}')">
+    <div class="todo-item-description" id="item-${itemID}">${item.itemDescription}</div>
+    <div class="todo-item-duedate">${item.itemDueDate}</div>
+    <div class="edit-todo-button" onclick="editItem(${selectedListID},${itemID})"><img class="icons" src="./icons/edit.png"></div>
+    <div class="delete-todo-button js-delete-todo-button" onclick="confirmDeleteItem(${selectedListID},${itemID})"><img class="icons" src="./icons/delete.png"></div>
   `;
   document.getElementById(itemID).innerHTML = editHTML;
   document.getElementById(itemID).style.gridTemplateColumns = "0.25fr 2.25fr 1.25fr 0.25fr 0.15fr";
