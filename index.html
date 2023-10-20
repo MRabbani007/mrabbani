@@ -230,10 +230,8 @@
       <section class="Section" id="projects">
         <div class="section-heading" id="hd-projects">Projects</div>
         <div class="projects-block">
-          <div class="projects-heading">
-            <h2>Coming soon</h2>
-          </div>
-          <div><a href="./todoList/todolist.html">To Do List</a></div>
+          <div class="projects-heading">Coming soon</div>
+          <div class="projects-body"><a target="_blank" href="./todoList/todolist.html">To Do List</a></div>
         </div>
       </section>
 
@@ -343,7 +341,6 @@
     function navHighlighter() {
       // Get current scroll position
       let scrollY = window.pageYOffset;
-      console.log("scroll");
       // Now we loop through sections to get height, top and ID values for each
       sections.forEach(current => {
         const sectionHeight = current.offsetHeight;
