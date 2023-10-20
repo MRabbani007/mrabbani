@@ -21,8 +21,9 @@ a {
   text-decoration: none;
   color: black;
 }
+
 p {
-  padding: 10px;
+  padding: 5px 0;
   margin: 0;
 }
 
@@ -118,6 +119,7 @@ p {
   position: absolute;
   top: 20%;
   left: 15%;
+  width: 80%;
   background-color: rgba(41, 41, 41, 0.9);
   color: white;
   padding: 2vw;
@@ -173,9 +175,11 @@ p {
 }
 
 .about-text {
+  padding: 0 10px;
   font-family: 'Raleway', sans-serif;
   font-weight: normal;
   font-size: var(--fontsize-h2);
+  text-align: justify;
   color: black;
 }
 
@@ -223,23 +227,13 @@ p {
 
 .experience-heading, .academics-heading {
   border-bottom: 1px solid gray;
-  padding: 0 15px 10px;
-  color: rgb(23, 6, 175);
+  padding: 0 0 10px;
+  color: rgb(12, 0, 116);
   font-size: var(--fontsize-h3);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center; /* vertically align items */
 } 
-
-.experience-footing, .academics-footing {
-  display: flex;
-  text-align: justify;
-  text-overflow: ellipsis;
-  padding-top: 10px;
-  border-top: 1px solid gray;
-  flex-direction: row;
-}
 
 /* wrapper for company name & logo */
 .experience-company-logo {
@@ -262,24 +256,37 @@ p {
   display: grid;
   grid-template-columns: 30px 1fr;
   margin: 0;
-  padding: 10px 0;
+  row-gap: 10px;
+  text-align: center;
 }
 
-.bullet, .list-item {
-  padding: 10px;
+.list-item, .bullet {
+  padding: 5px 0 0;
   font-size: var(--fontsize-h3);
   text-align: justify;
   line-height: 30px;
 }
 
+.bullet img {
+  width: 15px;
+}
+
+.experience-footing, .academics-footing {
+  display: flex;
+  align-content: stretch;
+  padding-top: 10px;
+  border-top: 1px solid gray;
+}
 .experience-time-period, .academics-period {
-padding: 0 20px;
-margin-right: 10px;
-border-right: 1px solid gray;
-font-size: var(--fontsize-h4);
+  flex: 1;
+  padding: 0 20px 0 0;
+  margin-right: 10px;
+  border-right: 1px solid gray;
+  font-size: var(--fontsize-h4);
 }
 
 .experience-location {
+  flex: 2;
   padding: 0 10px;
   font-size: var(--fontsize-h4);
   }
@@ -307,7 +314,6 @@ font-size: var(--fontsize-h4);
 .contacts {
   display: flex;
   align-items: center;
-  padding: 0 10px;
   font-size: var(--fontsize-h3);
   margin: 3vh auto;
 }
@@ -339,9 +345,12 @@ font-size: var(--fontsize-h4);
   }
   .experience-heading, .academics-heading {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr;
     font-size: var(--fontsize-h4);
   } 
+  .experience-company-logo {
+    text-align: center;
+  }
   .bullet, .list-item {
     font-size: var(--fontsize-h4);
     text-align: left;
