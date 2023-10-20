@@ -95,12 +95,10 @@ p {
 
 .section-title2 {
   display: none;
-  margin: 1vw auto;
-  padding: 0;
-  width: 70%;
+  margin: 0 auto;
   text-align: center;
   align-items: center;
-  transition: all 1.5s linear 0.1s;
+  transition: all 1s;
 }
 
 .section-title2 .section-title {
@@ -327,8 +325,8 @@ font-size: var(--fontsize-h4);
   /*Display title on top*/
   .section-title2 {
     display: block;
-    padding: 5vh 0;
-    position: relative;
+    padding: 50px 0;
+    background-color: white;
   }
   .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
     width: 90%;
