@@ -167,7 +167,7 @@ p {
 }
 
 .about-statement {
-  padding: 5px;
+  padding: 15px;
   margin: 0 15px 1vw;
   font-size: var(--fontsize-h2);
   background-color: rgb(212, 212, 212);
@@ -182,7 +182,7 @@ p {
 }
 
 /* skills & competencies */
-.skills-header {
+.skills-header, .projects-heading {
   background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(160, 160, 160);
   color: rgb(0, 0, 0);
@@ -219,6 +219,21 @@ p {
   font-family: monospace;
 }
 
+.projects-body {
+  padding: 20vh 0;
+}
+
+.experience-heading, .academics-heading {
+  border-bottom: 1px solid gray;
+  padding: 0 15px 10px;
+  color: rgb(23, 6, 175);
+  font-size: var(--fontsize-h3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; /* vertically align items */
+} 
+
 .experience-footing, .academics-footing {
   display: flex;
   text-align: justify;
@@ -228,24 +243,15 @@ p {
   flex-direction: row;
 }
 
-.experience-heading, .academics-heading {
-  border-bottom: 1px solid gray;
-  padding: 0 15px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; /* vertically align items */
-} 
-
 /* wrapper for company name & logo */
 .experience-company-logo {
   display: flex;
   align-items: center;
+  justify-content: right;
 }
 
 .experience-position, .experience-company, .academics-position, .academics-location {
-  color: rgb(23, 6, 175);
-  font-size: var(--fontsize-h3);
+  padding: 0 5px;
 }
 
 .company-logo {
@@ -269,13 +275,14 @@ p {
 }
 
 .experience-time-period, .academics-period {
-padding: 0 1vw;
+padding: 0 20px;
+margin-right: 10px;
 border-right: 1px solid gray;
 font-size: var(--fontsize-h4);
 }
 
 .experience-location {
-  padding: 0 1vw;
+  padding: 0 10px;
   font-size: var(--fontsize-h4);
   }
 
@@ -283,6 +290,7 @@ font-size: var(--fontsize-h4);
   display: flex;
   flex-wrap: wrap;
   margin: 0 1vw 1vw;
+  font-size: var(--fontsize-h5);
 }
 
 .work-skills-item {
@@ -291,7 +299,7 @@ font-size: var(--fontsize-h4);
   margin: 10px;
   padding: 10px 15px;
   font-size: var(--fontsize-h4);
-  box-shadow: 3px 1px blue;
+  box-shadow: 2px 1px rgb(0, 0, 110);
 }
 
 .work-skills-item:hover {
@@ -318,9 +326,10 @@ font-size: var(--fontsize-h4);
   }
   /*Display title on top*/
   .section-title2 {
-    display: flex;
+    display: block;
+    padding: 5vh 0;
+    position: relative;
   }
-
   .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
     width: 90%;
   }
@@ -330,8 +339,14 @@ font-size: var(--fontsize-h4);
   .about-statement, .about-text {
     font-size: var(--fontsize-h3);
   }
-  .experience-responsibilities, .academics-achievements {
-    font-size: var(--fontsize-h5);
+  .experience-heading, .academics-heading {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: var(--fontsize-h4);
+  } 
+  .bullet, .list-item {
+    font-size: var(--fontsize-h4);
+    text-align: left;
   }
 }
 
