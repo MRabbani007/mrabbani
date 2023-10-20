@@ -336,7 +336,10 @@
     const sections = document.querySelectorAll(".Section");
 
     // Add an event listener listening for scroll
-    window.onscroll = function(){navHighlighter()};
+    window.onscroll = function(){
+      navHighlighter();
+      shrinkHeader();
+    }
 
     function navHighlighter() {
       // Get current scroll position
@@ -359,6 +362,17 @@
         }
     });
   } 
+
+    function shrinkHeader(){
+      var shrinkHeader = 30;
+      var scroll = window.pageYOffset || document.documentElement.scrollTop;
+        if ( scroll >= shrinkHeader ) {
+            document.querySelector('.section-title2').style.padding = "10px 0";
+          }
+          else {
+            document.querySelector('.section-title2').style.padding = "50px 0";
+          }
+    }
 
   function addactive(){
     if(document.querySelector(".section-title").classList.contains("active")){
