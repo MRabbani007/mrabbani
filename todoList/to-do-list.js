@@ -89,7 +89,7 @@ function createList (){
   mytodoList.push ({
     todoListId: listID,
     todoListName: listName,
-    todoListStatus: 'open',
+    todoListStatus: 'closed',
     todoListItem: []
   });
 
@@ -104,6 +104,7 @@ function openList (selectedListID) {
   // check if list already open
   if(!document.getElementById("cont-"+selectedListID)){
     let index = getListIndex(selectedListID);
+    mytodoList[index].todoListStatus = "open";
     let todoListHTML = `
       <div class="list-container" id="cont-${selectedListID}">
         <div class="todolist-header">
@@ -113,7 +114,8 @@ function openList (selectedListID) {
         <div class="todo-input-grid">
           <input placeholder="Todo description" class="name-input" id="input-${selectedListID}">
           <input type="date" class="due-date-input">
-          <div onclick="addTodo(${selectedListID})" class="add-todo-button" id="addButton-${selectedListID}">Add</div>
+          <div onclick="addTodo(${selectedListID})" class="add-todo-button" id="addButton-${selectedListID}">
+          <img title="add new task" class="icons" src="./icons/add-task.png"></div>
         </div>
         <div class="js-todo-list todo-grid" id="grid-${selectedListID}"></div>
       </div>
@@ -244,7 +246,9 @@ function deleteList (selectedListID){
 }
 
 function closeList(selectedListID){
+  mytodoList[getListIndex(selectedListID)].todoListStatus = "closed";
   document.getElementById("cont-"+selectedListID).remove();
+  save();
 }
 
 function confirmDeleteItem (selectedListID, itemID){
@@ -371,3 +375,9 @@ function editCancel(selectedListID, itemID){
 load();
 //console.log(mytodoList);
 renderListNames();
+
+mytodoList.forEach((list)=>{
+  if(list.todoListStatus == "open"){
+    openList(list.todoListId);
+  }
+});
