@@ -359,7 +359,7 @@ p {
   /*Display title on top*/
   .section-title2 {
     display: block;
-    padding: 50px 0;
+    padding: 100px 0;
     background-color: white;
   }
   .about-block, .skills-block, .experience-block, .projects-block, .academics-block, .contacts-block {
