@@ -5,6 +5,8 @@
 body {
   font-family: "Roboto", Verdana, Geneva;
   background-color: rgb(228, 227, 227);
+  margin: 0;
+  padding: 20px 0;
 }
 .icons {
   width: 30px;
@@ -63,6 +65,8 @@ body {
   display: none;
   margin: 5px 0 0;
   justify-content: center; /*horizontal*/
+  align-items: center;
+  background-color: rgb(226, 223, 223);
 }
 
 .input-list-name {
@@ -75,18 +79,11 @@ body {
 }
 
 .input-list-button {
-  background-color: rgba(14, 0, 90, 0.822);
-  color: white;
-  border: none;
-  width: 100px;
-  padding: 7px 20px;
-  font-size: 20px;
   cursor: pointer;
   transition: all 1s;
 }
 
 .input-list-button:hover {
-  background-color: rgba(26, 0, 170, 0.822);
   transition: all 1s;
 }
 
@@ -122,26 +119,27 @@ body {
 
 /* Todo List Main Container */
 .active-list-container {
+  width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 20px;
   justify-content: center;
 }
 
 /* Container for each list */
 .list-container{
   min-width: 350px;
-  max-width: 60%;
-  flex: 1;
-  margin: 20px;
+  max-width: 500px;
+  width: 60%;
+  margin: 30px;
   background: white;
   padding: 10px;
   box-shadow: 2px 2px black;
 }
 
 .todo-input-grid  {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 0.5fr;
   margin-bottom: 10px;
   justify-content: space-between;
 }
@@ -150,8 +148,8 @@ body {
   display: flex;
   justify-content: space-between;
   margin: 5px 0;
+  padding: 5px 0;
   align-items: center;
-  padding: 5px 15px;
 }
 
 .todo-item-open {
@@ -193,23 +191,13 @@ body {
   background-color: rgb(216, 233, 255);
 }
 
-.name-input{
-  flex: 3;
-}
-.due-date-input {
-  flex: 1;
-  border-left: 1px solid black;
-}
-
 .add-todo-button {
   flex: 1;
-  background-color: rgba(61, 36, 204, 0.822);
-  color: white;
-  font-size: 15px;
+  background-color: rgb(216, 233, 255);
   cursor: pointer;
   text-align: center;
   align-self: center;
-  padding: 10px 0;
+  padding: 5px 0;
 }
 
 .todolist-header {
@@ -218,9 +206,15 @@ body {
   font-size: 20px;
   padding: 5px;
   margin-bottom: 20px;
-  border-bottom: 4px solid blue;
+  border-bottom: 2px solid rgb(10, 0, 148);
 }
 
 @media (max-width:900px){
-
+  .list-name-container, .list-container{
+    width: 90%;
+    margin: 10px auto;
+  }
+  .input-list-name, .name-input, .due-date-input {
+    border-radius: none;
+  }
 }
