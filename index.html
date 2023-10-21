@@ -12,6 +12,28 @@
 </head>
 <body>
   <div class="main-container">
+    <div class="menu-container">
+      <div class="menu-button"><img src="./icons/menu.png"></div>
+      <div class="menu-content">
+        <a href="#about">
+          <div class="menu-link">
+          <img class="menu-icons" src="./icons/about.png"><span>About</span></div></a>
+        <a href="#skills"><div class="menu-link">
+          <img class="menu-icons" src="./icons/skills.png"><span>Skills</span></div></a>
+        <a href="#experience"><div class="menu-link">
+          <img class="menu-icons" src="./icons/experience.png"><span>Experience</span></div></a>
+        <a href="#projects"><div class="menu-link">
+          <img class="menu-icons" src="./icons/projects.png"><span>Projects</span></div></a>
+        <a href="#education"><div class="menu-link">
+          <img class="menu-icons" src="./icons/education.png"><span>Education</span></div></a>
+        <a href="#contacts"><div class="menu-link">
+          <img class="menu-icons" src="./icons/contacts.png"><span>Contacts</span></div></a>
+        <a target="_blank"  href="./mohamad-rabbani-cv.pdf"><div class="menu-link">
+          <img class="menu-icons" src="./icons/resume.png"><span>Resume</span></div></a>
+      </div>
+    </div>
+
+    <div class="nav-display nav-icons" onclick="displayNav()"><img src="./icons/menu.png"></div>
     <!-- Main Header -->
     <div class="left-container">
       <div class="navigator">
@@ -21,19 +43,19 @@
       </div>
       <div class="navigation-links">
         <a href="#about"><div class="links" id="link-about">
-          <img class="nav-icons" src="./icons/about.png">About</div></a>
+          <img class="nav-icons" src="./icons/about.png"><span>About</span></div></a>
         <a href="#skills"><div class="links" id="link-skills">
-          <img class="nav-icons" src="./icons/skills.png">Skills</div></a>
+          <img class="nav-icons" src="./icons/skills.png"><span>Skills</span></div></a>
         <a href="#experience"><div class="links" id="link-experience">
-          <img class="nav-icons" src="./icons/experience.png">Experience</div></a>
+          <img class="nav-icons" src="./icons/experience.png"><span>Experience</span></div></a>
         <a href="#projects"><div class="links" id="link-projects">
-          <img class="nav-icons" src="./icons/projects.png">Projects</div></a>
+          <img class="nav-icons" src="./icons/projects.png"><span>Projects</span></div></a>
         <a href="#education"><div class="links" id="link-education">
-          <img class="nav-icons" src="./icons/education.png">Education</div></a>
+          <img class="nav-icons" src="./icons/education.png"><span>Education</span></div></a>
         <a href="#contacts"><div class="links" id="link-contacts">
-          <img class="nav-icons" src="./icons/contacts.png">Contacts</div></a>
+          <img class="nav-icons" src="./icons/contacts.png"><span>Contacts</span></div></a>
         <a target="_blank"  href="./mohamad-rabbani-cv.pdf"><div class="links">
-          <img class="nav-icons" src="./icons/resume.png">Resume</div></a>
+          <img class="nav-icons" src="./icons/resume.png"><span>Resume</span></div></a>
       </div>
     </div>
     
@@ -401,6 +423,44 @@
   function scrollTopFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+  let x = 1;
+  function displayNav() {
+    let left = document.querySelector(".left-container");
+    let nav = document.querySelector(".navigator");
+    let body = document.querySelector(".right-container");
+    let sectionHeading = document.querySelectorAll(".section-heading");
+    if (x==1){
+      // hide navigator
+      x=0;
+      left.style.width = "0";
+      nav.style.position = "relative";
+      nav.style.top = "none";
+      nav.style.left = "none";
+      body.style.width = "100%";
+      sectionHeading.forEach(element => {
+       element.style.padding = "20px 60px";
+      });
+    } else {
+      // show navigator
+      x=1;
+      wait();
+      nav.style.position = "fixed";
+      body.style.width = "80%";
+      left.style.width = "20%";
+      nav.style.top = 0;
+      nav.style.left = 0;
+      sectionHeading.forEach(element => {
+       element.style.padding = "20px 2.5vw";
+      });
+    }
+  }
+  function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+  }
+  async function wait() {
+    await delay(10000);
   }
   </script>
 
