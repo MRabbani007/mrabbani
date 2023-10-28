@@ -21,6 +21,7 @@ a {
 }
 .container {
   margin: 0 auto;
+  height: 100vh;
 }
 
 .background-img {
@@ -492,9 +493,6 @@ a {
   grid-template-columns: 50px 1fr;
   font-size: 1em;
   align-items: center;
-}
-
-.education-right {
 }
 
 .container-contacts{
