@@ -22,6 +22,7 @@ a {
 .container {
   margin: 0 auto;
   height: 100vh;
+  overflow-wrap: break-word;
 }
 
 .background-img {
@@ -86,7 +87,11 @@ a {
   position: relative;
   height: 300px;
   margin: 20px 0;
+  padding-top: 20%;
   border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons {
@@ -103,35 +108,23 @@ a {
   transition: all 1s;
 }
 .links-icon-about {
-  position: absolute;
-  top: -15%;
-  left: 35%;
+  margin-top: -110%;
   cursor: pointer;
-}
-.icons-about {
-  width: 100px;
-}
-.links-text {
-  position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  bottom: 15%;
-  left: 15%;
+}
+.icons-about {
+  width: 150px;
+}
+.links-text {
   font-size: 2em;
   font-weight: 100;
   font-family: arial;
 }
 .links-text-about {
-  position: absolute;
-  display: flex;
-  width: 85%;
   justify-content: center;
   align-items: center;
   text-align: center;
-  top: 40%;
-  left: 7%;
   font-size: 2em;
   font-weight: 900;
   font-weight: 700;
