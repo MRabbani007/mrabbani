@@ -252,7 +252,7 @@ a {
 }
 
 .header-experience {
-  width: 50%;
+  width: max(50%,150px);
   background-color: rgb(0, 17, 92);
   border-radius: 20px 0 0 20px;
   font-size: 3em;
@@ -270,7 +270,7 @@ a {
 }
 
 .header-experience-left {
-  width: 50%;
+  width: max(50%,150px);
   font-size: 3em;
   padding: 10px 30px;
   background-color: rgb(0, 17, 92);
@@ -394,7 +394,7 @@ a {
 .container-skills-2 {
   font-family: "Roboto";
   font-weight: 100;
-  background-color: rgb(188, 183, 255);
+  background-color: rgb(172, 185, 255);
 }
 
 .header-skills-2 {
@@ -433,7 +433,7 @@ a {
 }
 
 .container-education{
-  background-color: rgb(211, 211, 255);
+  background-color: rgb(152, 163, 255);
   padding: 10px 20px;
   font-family: "Roboto", Verdana, Geneva;
 }
@@ -587,7 +587,7 @@ a {
   .container {
     max-width: 1536px;
     height: 100vh;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 /* xl */
@@ -614,7 +614,7 @@ a {
   .container {
     max-width: 768px;
     height: auto;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 /* sm */
@@ -622,12 +622,15 @@ a {
   .container {
     width: 100%;
     height: auto;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    overflow: auto;
   }
 }
 /* xs */
 @media (max-width: 475px) {
   .container {
     width: 100%;
+    font-size: 0.8rem;
+    overflow: auto;
   }
 }
