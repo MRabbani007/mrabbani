@@ -141,45 +141,45 @@ a {
 .box1{
   background-color: rgb(228, 228, 228);
   height: 200px;
-  animation: 1.5s ease-out 0s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0s 1 slideInLeft;
 }
 .box2{
   background-color: rgb(112, 162, 255);
   height: 300px;
   color: white;
-  animation: 1.5s ease-out 0s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0s 1 slideInLeft;
 }
 .box3{
   background-color: rgb(6, 38, 96);
   height: 250px;
   color: white;
-  animation: 1.5s ease-out 0.4s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0.4s 1 slideInLeft;
 }
 .box4{
   background-color: rgb(204, 222, 255);
   height: 250px;
-  animation: 1.5s ease-out 0.6s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0.6s 1 slideInLeft;
 }
 .box5{
   background-color: rgb(158, 192, 255);
   height: 250px;
-  animation: 1.5s ease-out 0.8s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0.8s 1 slideInLeft;
 }
 .box6{
   background-color: rgb(19, 53, 116);
   height: 250px;
   color: white;
-  animation: 1.5s ease-out 0.8s 1 slideRotateLeft;
+  animation: 1.5s ease-out 0.8s 1 slideInLeft;
 }
 .box7{
   background-color: rgb(186, 210, 255);
   height: 200px;
-  animation: 1.5s ease-out 1s 1 slideRotateLeft;
+  animation: 1.5s ease-out 1s 1 slideInLeft;
 }
 .box8{
   background-color: rgb(211, 211, 211);
   height: 300px;
-  animation: 1.5s ease-out 1s 1 slideRotateLeft;
+  animation: 1.5s ease-out 1s 1 slideInLeft;
 }
 .box1 a, .box5 a, .box7 a, .box8 a {
   color: black;
@@ -544,21 +544,6 @@ a {
   }
   100% {
     background-position: 500%;
-  }
-}
-
-@keyframes slideRotateLeft {
-  0% { 
-    transform: translateX(-100%); 
-    rotate: 10deg;
-  }
-  50% { 
-    transform: translateX(-30%); 
-    rotate: 5deg;
-  }
-  100%  { 
-    transform: translateX( 0);
-    rotate: 0deg;
   }
 }
 
