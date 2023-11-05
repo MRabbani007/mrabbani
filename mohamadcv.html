@@ -33,29 +33,29 @@
       </div>
     </div>
 
-    <div class="nav-display nav-icons" onclick="displayNav()"><img src="./icons/menu.png"></div>
     <!-- Main Header -->
     <div class="left-container">
       <div class="navigator">
       <div class="section-title" onclick="scrollTopFunction()"> <!---->
         <div class="title">Mohamad Rabbani</div>
         <div class="sub-title">Electrical & Computer Engineer</div>
+        <div class="nav-button" onclick="displayNav()"><img class="nav-button-img" src="./icons/arrow-left.png" alt=""></div>
       </div>
       <div class="navigation-links">
-        <a href="#about"><div class="links" id="link-about">
-          <img class="nav-icons" src="./icons/about.png"><span>About</span></div></a>
-        <a href="#skills"><div class="links" id="link-skills">
-          <img class="nav-icons" src="./icons/skills.png"><span>Skills</span></div></a>
-        <a href="#experience"><div class="links" id="link-experience">
-          <img class="nav-icons" src="./icons/experience.png"><span>Experience</span></div></a>
-        <a href="#projects"><div class="links" id="link-projects">
-          <img class="nav-icons" src="./icons/projects.png"><span>Projects</span></div></a>
-        <a href="#education"><div class="links" id="link-education">
-          <img class="nav-icons" src="./icons/education.png"><span>Education</span></div></a>
-        <a href="#contacts"><div class="links" id="link-contacts">
-          <img class="nav-icons" src="./icons/contacts.png"><span>Contacts</span></div></a>
-        <a target="_blank"  href="./mohamad-rabbani-cv.pdf"><div class="links">
-          <img class="nav-icons" src="./icons/resume.png"><span>Resume</span></div></a>
+        <div class="links" id="link-about"><a href="#about">
+          <img class="nav-icons" src="./icons/about.png"><span>About</span></a></div>
+        <div class="links" id="link-skills"><a href="#skills">
+          <img class="nav-icons" src="./icons/skills.png"><span>Skills</span></a></div>
+        <div class="links" id="link-experience"><a href="#experience">
+          <img class="nav-icons" src="./icons/experience.png"><span>Experience</span></a></div>
+        <div class="links" id="link-projects"><a href="#projects">
+          <img class="nav-icons" src="./icons/projects.png"><span>Projects</span></a></div>
+        <div class="links" id="link-education"><a href="#education">
+          <img class="nav-icons" src="./icons/education.png"><span>Education</span></a></div>
+        <div class="links" id="link-contacts"><a href="#contacts">
+          <img class="nav-icons" src="./icons/contacts.png"><span>Contacts</span></a></div>
+        <div class="links"><a target="_blank"  href="./mohamad-rabbani-cv.pdf">
+          <img class="nav-icons" src="./icons/resume.png"><span>Resume</span></a></div>
       </div>
     </div>
     
@@ -69,11 +69,22 @@
       </div>
       <!-- Background image -->
       <section>
-        <div class="background-container"><img class="background" src="./png/background.png">
-          <!--<div class="background-text">
-            Make <span class="span1">things</span> that <span class="span2">make a difference.</span>
-          
+        <div class="background-container">
+          <!--<img class="background" src="./png/background.png">-->
+          <div class="subcontainer-left">
+            <div class="square-left"></div>
+            <div class="background-text">
+              Make <span class="span1">things</span> that<br><span class="span2">make a difference.</span>
+            </div>
           </div>
+          <div class="subcontainer-right">
+            <div class="square-right"></div>
+            <div class="background-right">
+              <div class="span3">Mohamad</div>
+              <div class="span4">Rabbani</div>
+            </div>
+          </div>
+          <!--
           <img class="header-text" src="./icons/text.png">
           <img class="logo" src="./icons/mr-white.png">-->
         </div>
@@ -394,11 +405,30 @@
           (scrollY+400 >= sectionTop) && (scrollY+400 <= (sectionTop + sectionHeight))
         ){
           document.getElementById("link-"+sectionId).classList.add("active");
+          document.getElementById("link-"+sectionId).classList.add("active"+getIndex(sectionId));
         } else {
           document.getElementById("link-"+sectionId).classList.remove("active");
+          document.getElementById("link-"+sectionId).classList.remove("active"+getIndex(sectionId));
         }
-    });
-  } 
+      });
+    } 
+
+    function getIndex(sectionID){
+      switch (sectionID){
+        case 'about':
+          return 1;
+        case 'skills':
+          return 2;
+        case 'experience':
+          return 3;
+        case 'projects':
+          return 4;
+        case 'education':
+          return 5;
+        case 'contacts':
+          return 6;
+      }
+    }
 
     function shrinkHeader(){
       var shrinkHeader = 30;
@@ -429,6 +459,8 @@
   function displayNav() {
     let left = document.querySelector(".left-container");
     let nav = document.querySelector(".navigator");
+    let button = document.querySelector('.nav-button');
+    let buttonImg = document.querySelector('.nav-button-img');
     let body = document.querySelector(".right-container");
     let sectionHeading = document.querySelectorAll(".section-heading");
     if (x==1){
@@ -439,6 +471,8 @@
       nav.style.top = "none";
       nav.style.left = "none";
       body.style.width = "100%";
+      button.style.left = "20px";
+      buttonImg.src = "./icons/arrow-right.png";
       sectionHeading.forEach(element => {
        element.style.padding = "20px 60px";
       });
@@ -451,6 +485,8 @@
       left.style.width = "20%";
       nav.style.top = 0;
       nav.style.left = 0;
+      button.style.left = "18.5%";
+      buttonImg.src  = "./icons/arrow-left.png";
       sectionHeading.forEach(element => {
        element.style.padding = "20px 2.5vw";
       });
