@@ -137,7 +137,7 @@ function addTodo(selectedListID) {
    return; 
   }
   
-  const inputElement = document.querySelector('.name-input')
+  const inputElement = document.getElementById('input-'+selectedListID)
   let description = inputElement.value;
   let dueDate = document.querySelector('.due-date-input').value;
 
