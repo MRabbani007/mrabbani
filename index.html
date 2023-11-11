@@ -16,17 +16,61 @@
 </head>
 <body>
 <div class="main-container">
-  <div class="container container-background">
+
+  <!-- <div class="container container-background" id="background">
     <!--
     <img class="background-img" src="./png/background.jpg" alt="background">
     -->
+    <!--
     <div class="subcontainer-title">
       <div>
         <div class="title-heading">Mohamad Rabbani</div>
         <div class="title-subheading">Electrical & Computer Engineer</div>
       </div>
     </div>
+  </div> -->
+
+  <div class="nav">
+    <a href="#" style="display: none;">
+      <div class="menu-link" id="link-background"></div>
+    </a>
+    <a href="#about">
+      <div class="menu-link" id="link-about">
+      <img class="menu-icons" src="./icons/about.png"><span>About</span>
+    </div>
+    </a>
+    <a href="#skills1">
+      <div class="menu-link" id="link-skills">
+      <img class="menu-icons" src="./icons/skills.png"><span>Skills</span>
+    </div>
+    </a>
+    <a href="#experience">
+      <div class="menu-link" id="link-experience">
+      <img class="menu-icons" src="./icons/experience.png"><span>Experience</span>
+    </div>
+    </a>
+    <!-- <a href="#projects">
+      <div class="menu-link" id="link-projects">
+      <img class="menu-icons" src="./icons/projects.png"><span>Projects</span>
+    </div>
+    </a> -->
+    <a href="#education">
+      <div class="menu-link" id="link-education">
+      <img class="menu-icons" src="./icons/education.png"><span>Education</span>
+    </div>
+    </a>
+    <a href="#contacts">
+      <div class="menu-link" id="link-contacts">
+      <img class="menu-icons" src="./icons/contacts.png"><span>Contacts</span>
+    </div>
+    </a>
+    <a target="_blank"  href="./mohamad-rabbani-cv.pdf">
+      <div class="menu-link">
+      <img class="menu-icons" src="./icons/resume.png"><span>Resume</span>
+    </div>
+    </a>
   </div>
+  <!--  
   <div class="container container-links">
     <div class="row">
       <div class="col">
@@ -90,7 +134,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
   <div class="container container-about" id="about">
     <div class="about-left">
       <div class="curtain"></div>
@@ -192,7 +236,7 @@
     </div>
   </div>
   <!-- Experience block 1 -->
-  <div class="container container-experience" id="experience">
+  <div class="container container-experience" id="experience1">
     <div class="header-experience-container">
       <div class="header header-experience">Experience
       </div>
@@ -232,11 +276,11 @@
     </div>
   </div>
   <!-- Experience block 2 -->
-  <div class="container container-experience">
-    <div class="header-experience-container-left">
+  <div class="container container-experience" id="experience2">
+    <!-- <div class="header-experience-container-left">
       <div class="header header-experience-left">Experience
       </div>
-    </div>
+    </div> -->
     <div class="experience-subcontainer">
       <div class="exp-col-left">
         <div class="exp-position">Procurement Engineer</div>
@@ -260,11 +304,11 @@
     </div>
   </div>
   <!-- Experience block 3 -->
-  <div class="container container-experience">
-    <div class="header-experience-container">
+  <div class="container container-experience" id="experience3">
+    <!-- <div class="header-experience-container">
       <div class="header header-experience">Experience
       </div>
-    </div>
+    </div> -->
     <div class="experience-subcontainer">
       <div class="exp-col-left">
         <div class="exp-position">E&I Engineer</div>
@@ -290,11 +334,11 @@
     </div>
   </div>
   <!-- Experience block 4 -->
-  <div class="container container-experience">
-    <div class="header-experience-container-left">
+  <div class="container container-experience" id="experience4">
+    <!-- <div class="header-experience-container-left">
       <div class="header header-experience-left">Experience
       </div>
-    </div>
+    </div> -->
     <div class="experience-subcontainer">
       <div class="exp-col-left">
         <div class="exp-position">E&I Engineer</div>
@@ -383,5 +427,100 @@
     </div>
   </div>
 </div>
+<script>
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll(".container");
+
+    // Add an event listener listening for scroll
+    window.onscroll = () => {
+      navHighlighter();
+    }
+
+    function navHighlighter() {
+      // Get current scroll position
+      let scrollY = window.pageYOffset;
+      // Now we loop through sections to get height, top and ID values for each
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.getBoundingClientRect().top + scrollY;
+        sectionId = current.getAttribute("id");
+        if(sectionId !== undefined){
+          /*
+          - If our current scroll position enters the space where current section on screen is, add .active class to corresponding navigation link, else remove it
+          - To know which link needs an active class, we use sectionId variable we are getting while looping through sections as an selector
+          */
+          if (
+            (scrollY+400 >= sectionTop) && (scrollY+400 <= (sectionTop + sectionHeight))
+          ){
+            setActive(sectionId)
+          }
+        }
+      });
+    } 
+
+    function setActive(sectionId){
+      let menuLink = document.querySelectorAll('.menu-link');
+      menuLink.forEach( link => {
+          link.classList.remove("active");
+      })
+      let activeLink = document.getElementById("link-"+getSection(sectionId)).classList;
+      activeLink.add("active");
+    }
+
+    function getIndex(sectionID){
+      switch (sectionID){
+        case 'about':
+          return 1;
+        case 'skills1': 
+          return 2;
+        case 'skills2':
+          return 2;
+        case 'experience1': 
+          return 3;
+        case 'experience2': 
+          return 3;
+        case 'experience3': 
+          return 3;
+        case 'experience4':
+          return 3;
+        case 'projects':
+          return 4;
+        case 'education':
+          return 5;
+        case 'contacts':
+          return 6;
+      }
+    }
+
+    function getSection(sectionID){
+      switch (sectionID){
+        case 'background':
+          return 'background'
+        case 'about':
+          return 'about';
+
+        case 'skills1': 
+          return 'skills';
+        case 'skills2':
+          return 'skills';
+        case 'experience1': 
+          return 'experience';
+        case 'experience2': 
+          return 'experience';
+        case 'experience3': 
+          return 'experience';
+        case 'experience4':
+          return 'experience';
+        case 'projects':
+          return 'projects';
+        case 'education':
+          return 'education';
+        case 'contacts':
+          return 'contacts';
+          default:
+          return 'about'
+      }
+    }
+</script>
 </body>
 </html>
