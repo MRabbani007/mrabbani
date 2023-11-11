@@ -38,7 +38,7 @@ a {
   font-family: var(--font-Supreme);
   font-size: var(--fs-sm);
   font-weight: 200;
-  padding: 10px 20px;
+  padding: 0px 30px;
   position: sticky;
   top: 0;
   display: flex;
@@ -50,22 +50,27 @@ a {
   color: var(--clr-indigo-950);
 }
 .menu-link {
+  width: 15vw;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 10px;
   font-size: var(--fontsize-h4);
-  padding: 0 10px;
+  /* transition: all 0.5s ease-in; */
 }
 .menu-link span {
   padding: 0 10px;
 }
 .menu-link:hover{
-  border-bottom: 7px solid var(--clr-indigo-950);
+  border-bottom: 2px solid var(--clr-indigo-950);
 }
 .menu-icons {
   width: 40px;
 }
 .active {
-  border-bottom: 5px solid var(--clr-indigo-950);
+  /* border-bottom: 5px solid var(--clr-indigo-950); */
+  background-color: rgb(197, 197, 197);
+  color: white;
 }
 
 /* Utility Classes */
@@ -383,10 +388,10 @@ a {
 }
 
 .list-item {
-  text-align: justify;  
+  text-align: justify;
   border: 1px solid rgb(196, 196, 196);
   border-radius: 5px;
-  padding: 0 30px;
+  padding: 5px 30px;
   margin-top: 10px;
   margin-bottom: 5px;
   font-weight: 100;
