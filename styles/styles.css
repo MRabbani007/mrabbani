@@ -383,8 +383,9 @@ a {
 }
 
 .list-item {
-  text-align: justify;
-  /* border: 1px solid lightblue; */
+  text-align: justify;  
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 5px;
   padding: 0 30px;
   margin-top: 10px;
   margin-bottom: 5px;
