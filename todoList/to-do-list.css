@@ -1,12 +1,23 @@
+:root {
+  --clr-bg-stone-50: rgb(250 250 249);
+  --clr-bg-stone-100: rgb(245 245 244);
+  --clr-green-100: #dcfce7;
+  --clr-green-200: #bbf7d0;
+  --clr-blue-100: #dbeafe;
+  --clr-blue-200: #bfdbfe;
+  --clr-green-300: #86efac;
+  --clr-green-400: #4ade80;
+}
+
 /* Full Document Settings */
 *{
   box-sizing: border-box;
 }
 body {
   font-family: "Roboto", Verdana, Geneva;
-  background-color: rgb(228, 227, 227);
   margin: 0;
   padding: 20px 0;
+  background-color: var(--clr-bg-stone-100);
 }
 .icons {
   width: 30px;
@@ -24,8 +35,9 @@ body {
   width: 60%;
   margin: 40px auto 20px;
   padding: 15px;
+  border: 1px solid black;
   background-color: white;
-  box-shadow: 2px 4px black;
+  /* box-shadow: inset 1px 2px black; */
 }
 
 /* Application Title Section */
@@ -66,7 +78,7 @@ body {
   margin: 5px 0 0;
   justify-content: center; /*horizontal*/
   align-items: center;
-  background-color: rgb(226, 223, 223);
+  background-color: var(--clr-bg-stone-50);
 }
 
 .input-list-name {
@@ -75,7 +87,7 @@ body {
   width: 100%;
   padding: 10px;
   border: none;
-  background-color: rgb(226, 223, 223);
+  background-color: var(--clr-bg-stone-50);
 }
 
 .input-list-button {
@@ -92,13 +104,13 @@ body {
   display: flex;
   margin: 5px 0;
   padding: 5px 10px;
-  background-color: rgb(181, 219, 174);
+  background-color: var(--clr-green-100);
   align-items: center;
   transition: all 1s;
 }
 
 .display-list:hover {
-  background-color: rgba(80, 221, 80, 0.678);
+  background-color: var(--clr-green-200);
   transition: all 1s;
 }
 
@@ -114,7 +126,7 @@ body {
   padding: 10px;
   margin: 0 10px;
   width: 70%;
-  background-color: rgb(208, 228, 204);
+  background-color: var(--clr-bg-stone-50);
 }
 
 /* Todo List Main Container */
@@ -134,14 +146,16 @@ body {
   margin: 30px;
   background: white;
   padding: 10px;
-  box-shadow: 2px 2px black;
+  border: 1px solid gray;
+  /* box-shadow: 2px 2px black; */
 }
 
-.todo-input-grid  {
+.todo-input-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 0.5fr;
   margin-bottom: 10px;
   justify-content: space-between;
+  background-color: var(--clr-bg-stone-50);
 }
 
 .todo-item {
@@ -153,13 +167,19 @@ body {
 }
 
 .todo-item-open {
-  background-color: rgba(216, 255, 223, 0.747);
+  background-color: var(--clr-blue-100);
   text-decoration: none;
+}
+.todo-item-open:hover {
+  background-color: var(--clr-blue-200);
 }
 
 .todo-item-done {
   text-decoration: line-through;
-  background-color: rgba(93, 241, 118, 0.747);
+  background-color: var(--clr-green-200);
+}
+.todo-item-done:hover {
+  background-color: var(--clr-green-400);
 }
 
 .todo-item-description{
@@ -168,15 +188,6 @@ body {
 }
 .todo-item-duedate {
   flex: 1;
-}
-
-
-.todo-item-open:hover {
-  background-color: rgba(184, 255, 231, 0.884);
-}
-
-.todo-item-done:hover {
-  background-color: rgba(79, 206, 100, 0.747);
 }
 
 .todo-grid {
@@ -188,16 +199,16 @@ body {
   padding: 6px;
   border: none;
   outline: none;
-  background-color: rgb(216, 233, 255);
+  background-color: var(--clr-bg-stone-50);
 }
 
 .add-todo-button {
   flex: 1;
-  background-color: rgb(216, 233, 255);
   cursor: pointer;
   text-align: center;
   align-self: center;
   padding: 5px 0;
+  background-color: var(--clr-bg-stone-50);
 }
 
 .todolist-header {
