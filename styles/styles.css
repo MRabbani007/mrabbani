@@ -48,9 +48,9 @@ a {
 
 .nav a{
   color: var(--clr-indigo-950);
+  width: 14%;
 }
 .menu-link {
-  width: 15vw;
   display: flex;
   align-items: center;
   justify-content: center;
