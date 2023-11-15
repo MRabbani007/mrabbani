@@ -13,7 +13,7 @@ function genCartHTML(){
               <div class="card-header text-success fw-bold">Delivery Date: ${cart[i].deliveryDate}</div>
               <div class="card-body p-3">
                 <div class="row justify-content-between p-0 m-0 g-0 gap-0">
-                  <div class="col-2 m-0"><img class="cart-photo" src="../../${product.image}"></div>
+                  <div class="col-2 m-0"><img class="cart-photo" src="../${product.image}"></div>
                   <div class="col-lg-7 col-sm-5 m-0">
                     <div class="h5">${product.name}</div>
                     <div class="card-item text-danger">$${(cart[i].unitPrice/100).toFixed(2)}</div>
