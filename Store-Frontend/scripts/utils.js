@@ -78,10 +78,8 @@ function saveUsers(){
   if(users && users.length){
     fs.writeFile(usersFile, JSON.stringify(users), function (err) {
       if (err) throw err;
-      console.log('Saved!');
     });
   } else {
-    console.log('users empty')
   }
 }
 
@@ -125,6 +123,12 @@ function searchNavbar(page = ''){
   } else {
     window.location.replace('./store.html')
   }
+}
+
+function displayItem(productID){
+  session.item = productID;
+  saveSession();
+  window.location.replace("./item.html");
 }
 
 function redirect(target, callingPage=''){
