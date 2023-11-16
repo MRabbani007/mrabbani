@@ -175,7 +175,7 @@ const productsNew = [
       periodTo: 2
     }
   },
-  // Redragon S101 Gaming Keyboard, Black
+  // Redragon S101 Gaming Keyboard, Black, White
   {
     id: '4bb8ad86-7e90-46e1-bc57-fea910d978d4',
     name: 'Redragon S101 Gaming Keyboard, M601 Mouse, RGB Backlit Gaming Keyboard, Programmable Backlit Gaming Mouse, Value Combo Set [New Version]',
@@ -231,62 +231,62 @@ const productsNew = [
       periodTo: 2
     }
   },
-  // Redragon S101 Gaming Keyboard, White
-  {
-    id: 'cdfa0a61-d59b-420d-bf3b-8948d158d9dc',
-    name: 'Redragon S101 Wired RGB Backlit Gaming Keyboard with Multimedia Keys Wrist Rest and Red Backlit Mouse Combo 3200 DPI for Windows PC Gamers (White)',
-    category: "Computers",
-    rating: {
-      stars: 4.5,
-      count: 3342
-    },
-    reviews: 75,
-    priceCents: 3999,
-    keywords: [
-      "Gaming",
-      "Keyboards"
-    ],
-    supplier: 'Redragon Store',
+//   // Redragon S101 Gaming Keyboard, White
+//   {
+//     id: 'cdfa0a61-d59b-420d-bf3b-8948d158d9dc',
+//     name: 'Redragon S101 Wired RGB Backlit Gaming Keyboard with Multimedia Keys Wrist Rest and Red Backlit Mouse Combo 3200 DPI for Windows PC Gamers (White)',
+//     category: "Computers",
+//     rating: {
+//       stars: 4.5,
+//       count: 3342
+//     },
+//     reviews: 75,
+//     priceCents: 3999,
+//     keywords: [
+//       "Gaming",
+//       "Keyboards"
+//     ],
+//     supplier: 'Redragon Store',
 
-    variants: [[{
-        prop: 'color',
-        value: ['White']        
-      }, {
-        prop: 'image',
-        value: [['redragon_white_1.jpg','redragon_white_2.jpg','redragon_white_3.jpg','redragon_white_4.jpg','redragon_white_5.jpg','redragon_white_6.jpg']]        
-      }]
-  ],
+//     variants: [[{
+//         prop: 'color',
+//         value: ['White']        
+//       }, {
+//         prop: 'image',
+//         value: [['redragon_white_1.jpg','redragon_white_2.jpg','redragon_white_3.jpg','redragon_white_4.jpg','redragon_white_5.jpg','redragon_white_6.jpg']]        
+//       }]
+//   ],
 
-  properties: [{
-    prop: 'Brand',
-    value: 'Redragon'
-  }, {
-    prop: 'Color',
-    value: 'White'
-  }, {
-    prop: 'Connectivity Technology',
-    value: 'USB'
-  }, {
-    prop: 'Special Feature',
-    value: 'Backlit'
-  }, {
-    prop: 'Compatible Devices',
-    value: 'Personal Computer'
-  }],
+//   properties: [{
+//     prop: 'Brand',
+//     value: 'Redragon'
+//   }, {
+//     prop: 'Color',
+//     value: 'White'
+//   }, {
+//     prop: 'Connectivity Technology',
+//     value: 'USB'
+//   }, {
+//     prop: 'Special Feature',
+//     value: 'Backlit'
+//   }, {
+//     prop: 'Compatible Devices',
+//     value: 'Personal Computer'
+//   }],
     
-    about: ['PC GAMING KEYBOARD AND GAMING MOUSE COMBO: Includes Redragon RGB Backlit Computer Gaming Keyboard and RGB Backlit Gaming Mouse. ALL-IN-ONE PC GAMER VALUE KIT, Fantastic for Gamers (New Improved Version)',
-  'RGB BACKLIT GAMING KEYBOARD; 7 different RGB Lighting modes & effects, 4 backlight brightness levels, adjustable breathing speed. The keycaps offering clear uniform backlighting WIN key can be disabled for gaming. The PC Gaming Keyboard has been ergonomically designed to be a superb typing tool for office work as well. The gaming Keyboard is built to withstand the average liquid spill. The integrated wrist rest gives you the comfort you need for marathon gaming sessions',
-'MULTI MEDIA & ANTI GHOSTING; The Gaming Keyboard has 25 conflict free (n-Key Rollover) 10 Dedicated Multimedia keys plus 12 additional FN+ Multimedia keys (Total 114 keys). Keys are quiet, designed for longevity, durability delivering precise tactile feedback. Comes with Full numeric keypad and a gold-plated corrosion free USB connector for a reliable connection and ultimate Gaming performance',
-'WIRED GAMING MOUSE; Ergonomic Redragon RED Backlit Gaming Mouse up to 3200 DPI (user adjustable 800/1600/2400/3200 DPI), 30G acceleration and Weight Tuning set. Total 6 Buttons of which 5 are programmable. The High-Precision Sensor delivers Pinpoint Accuracy while the Gaming Grade Micro Switches ensure longevity, greater durability and extreme responsiveness, giving you an even greater edge over your competition',
-'PC GAMING KEYBOARD AND GAMING MOUSE COMPATIBILITY: Windows 10, Windows 8, Windows 7, Windows Vista, or Windows XP, Limited Mac OS keyboard support. Works well with all major Computers Brands and Gaming PCs.',
-'Note: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.'],
+//     about: ['PC GAMING KEYBOARD AND GAMING MOUSE COMBO: Includes Redragon RGB Backlit Computer Gaming Keyboard and RGB Backlit Gaming Mouse. ALL-IN-ONE PC GAMER VALUE KIT, Fantastic for Gamers (New Improved Version)',
+//   'RGB BACKLIT GAMING KEYBOARD; 7 different RGB Lighting modes & effects, 4 backlight brightness levels, adjustable breathing speed. The keycaps offering clear uniform backlighting WIN key can be disabled for gaming. The PC Gaming Keyboard has been ergonomically designed to be a superb typing tool for office work as well. The gaming Keyboard is built to withstand the average liquid spill. The integrated wrist rest gives you the comfort you need for marathon gaming sessions',
+// 'MULTI MEDIA & ANTI GHOSTING; The Gaming Keyboard has 25 conflict free (n-Key Rollover) 10 Dedicated Multimedia keys plus 12 additional FN+ Multimedia keys (Total 114 keys). Keys are quiet, designed for longevity, durability delivering precise tactile feedback. Comes with Full numeric keypad and a gold-plated corrosion free USB connector for a reliable connection and ultimate Gaming performance',
+// 'WIRED GAMING MOUSE; Ergonomic Redragon RED Backlit Gaming Mouse up to 3200 DPI (user adjustable 800/1600/2400/3200 DPI), 30G acceleration and Weight Tuning set. Total 6 Buttons of which 5 are programmable. The High-Precision Sensor delivers Pinpoint Accuracy while the Gaming Grade Micro Switches ensure longevity, greater durability and extreme responsiveness, giving you an even greater edge over your competition',
+// 'PC GAMING KEYBOARD AND GAMING MOUSE COMPATIBILITY: Windows 10, Windows 8, Windows 7, Windows Vista, or Windows XP, Limited Mac OS keyboard support. Works well with all major Computers Brands and Gaming PCs.',
+// 'Note: Products with electrical plugs are designed for use in the US. Outlets and voltage differ internationally and this product may require an adapter or converter for use in your destination. Please check compatibility before purchasing.'],
 
-    delivery: {
-      periodUnit: 'week',
-      periodFrom: 1,
-      periodTo: 2
-    }
-  },
+//     delivery: {
+//       periodUnit: 'week',
+//       periodFrom: 1,
+//       periodTo: 2
+//     }
+//   },
   // HP PC Gaming Keyboard and Mouse Combo
   {
     id: '1d079a98-913a-4b66-8f84-f6797b03e990',
@@ -565,126 +565,363 @@ const productsNew = [
     ]],
     about: []
   },
+  // Waterproof Knit Athletic Sneakers - Gray
   {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
+    name: "Waterproof Knit Athletic Sneakers - Gray",
     category: "fashion", 
     rating: {
-      stars: 4.5,
-      count: 56
+      stars: 4,
+      count: 89
     },
     reviews: 213,
-    priceCents: 799,
+    priceCents: 3390,
     keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
+      "shoes",
+      "running shoes",
+      "footwear"
     ],
     supplier: 'Sleek',
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Gray']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal']]        
+      value: [['knit-athletic-sneakers-gray.jpg']]        
     }
     ]],
     about: []
   },
+  // Round Sunglasses
   {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    id: "aad29d11-ea98-41ee-9285-b916638cac4a",
+    name: "Round Sunglasses",
     category: "fashion", 
     rating: {
       stars: 4.5,
-      count: 56
+      count: 30
     },
     reviews: 213,
-    priceCents: 799,
+    priceCents: 1560,
     keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
+      "accessories",
+      "shades"
     ],
     supplier: 'Sleek',
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Black']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal']]        
+      value: [['round-sunglasses-black.jpg']]        
     }
     ]],
     about: []
   },
+  // Women's Two Strap Buckle Sandals - Tan
   {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    id: "04701903-bc79-49c6-bc11-1af7e3651358",
+    name: "Women's Two Strap Buckle Sandals - Tan",
     category: "fashion", 
     rating: {
       stars: 4.5,
-      count: 56
+      count: 562
     },
     reviews: 213,
-    priceCents: 799,
+    priceCents: 2499,
     keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
+      "footwear",
+      "sandals",
+      "womens",
+      "beach",
+      "summer"
     ],
     supplier: 'Sleek',
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Beige']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal']]        
+      value: [['women-beach-sandals.jpg']]        
     }
     ]],
     about: []
   },
+  // Blackout Curtains Set 4-Pack - Beige
   {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
+    id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
     name: "Adults Plain Cotton T-Shirt - 2 Pack",
-    category: "fashion", 
+    category: "Home & Kitchen", 
     rating: {
       stars: 4.5,
-      count: 56
+      count: 232
     },
     reviews: 213,
-    priceCents: 799,
+    priceCents: 4599,
     keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
+      "bedroom",
+      "curtains",
+      "home"
     ],
     supplier: 'Sleek',
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Beige']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal']]        
+      value: [['blackout-curtain-set-beige.webp']]        
     }
     ]],
     about: []
   },
+  // Men's Slim-Fit Summer Shorts
   {
-    id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
+    name: "Men's Slim-Fit Summer Shorts",
     category: "fashion", 
     rating: {
-      stars: 4.5,
-      count: 56
+      stars: 4,
+      count: 160
     },
     reviews: 213,
     priceCents: 799,
     keywords: [
+      "shorts",
+      "apparel",
+      "mens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Gray']        
+    }, {
+      prop: 'image',
+      value: [['men-slim-fit-summer-shorts-gray.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter
+  {
+    id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
+    name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 5,
+      count: 846
+    },
+    reviews: 213,
+    priceCents: 3074,
+    keywords: [
+      "water boiler",
+      "appliances",
+      "kitchen"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['electric-glass-and-steel-hot-water-kettle.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Ultra Soft Tissue 2-Ply - 18 Box
+  {
+    id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
+    name: "Ultra Soft Tissue 2-Ply - 18 Box",
+    category: "Health & Household", 
+    rating: {
+      stars: 4,
+      count: 99
+    },
+    reviews: 213,
+    priceCents: 2374,
+    keywords: [
+      "kleenex",
+      "tissues",
+      "kitchen",
+      "tissues box",
+      "napkins"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['facial-tissue-2-ply-18-boxes.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Straw Lifeguard Sun Hat
+  {
+    id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
+    name: "Straw Lifeguard Sun Hat",
+    category: "fashion", 
+    rating: {
+      stars: 4,
+      count: 215
+    },
+    reviews: 213,
+    priceCents: 2200,
+    keywords: [
+      "hats",
+      "straw hats",
+      "summer",
+      "apparel"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['straw-sunhat.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Sterling Silver Sky Flower Stud Earrings
+  {
+    id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
+    name: "Sterling Silver Sky Flower Stud Earrings",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 52
+    },
+    reviews: 213,
+    priceCents: 1799,
+    keywords: [
+      "jewelry",
+      "accessories",
+      "womens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['sky-flower-stud-earrings.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Women's Stretch Popover Hoodie
+  {
+    id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
+    name: "Women's Stretch Popover Hoodie",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 2465
+    },
+    reviews: 213,
+    priceCents: 1374,
+    keywords: [
+      "hooded",
+      "hoodies",
+      "sweaters",
+      "womens",
+      "apparel"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Black']        
+    }, {
+      prop: 'image',
+      value: [['women-stretch-popover-hoodie-black.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Bathroom Bath Rug Mat 20 x 31 Inch - Grey
+  {
+    id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
+    name: "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 119
+    },
+    reviews: 213,
+    priceCents: 1250,
+    keywords: [
+      "bathmat",
+      "bathroom",
+      "home"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['bathroom-rug.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Women's Knit Ballet Flat
+  {
+    id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
+    name: "Women's Knit Ballet Flat",
+    category: "fashion", 
+    rating: {
+      stars: 4,
+      count: 326
+    },
+    reviews: 213,
+    priceCents: 2640,
+    keywords: [
+      "shoes",
+      "flats",
+      "womens",
+      "footwear"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Black']        
+    }, {
+      prop: 'image',
+      value: [['women-knit-ballet-flat-black.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Men's Regular-Fit Quick-Dry Golf Polo Shirt
+  {
+    id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
+    name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 2556
+    },
+    reviews: 213,
+    priceCents: 1599,
+    keywords: [
       "tshirts",
+      "shirts",
       "apparel",
       "mens"
     ],
@@ -695,7 +932,550 @@ const productsNew = [
       value: ['Default']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal']]        
+      value: [['men-golf-polo-t-shirt-blue.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Trash Can with Foot Pedal - Brushed Stainless Steel
+  {
+    id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
+    name: "Trash Can with Foot Pedal - Brushed Stainless Steel",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 2286
+    },
+    reviews: 213,
+    priceCents: 8300,
+    keywords: [
+      "garbage",
+      "bins",
+      "cans",
+      "kitchen"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['trash-can-with-foot-pedal-50-liter.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Duvet Cover Set with Zipper Closure
+  {
+    id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
+    name: "Duvet Cover Set with Zipper Closure",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4,
+      count: 456
+    },
+    reviews: 213,
+    priceCents: 2399,
+    keywords: [
+      "bedroom",
+      "bed sheets",
+      "sheets",
+      "covers",
+      "home"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['duvet-cover-set-blue-twin.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Women's Chunky Cable Beanie - Gray
+  {
+    id: "d2785924-743d-49b3-8f03-ec258e640503",
+    name: "Women's Chunky Cable Beanie - Gray",
+    category: "fashion", 
+    rating: {
+      stars: 5,
+      count: 83
+    },
+    reviews: 213,
+    priceCents: 1250,
+    keywords: [
+      "hats",
+      "winter hats",
+      "beanies",
+      "tuques",
+      "apparel",
+      "womens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['women-chunky-beanie-gray.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Men's Classic-fit Pleated Chino Pants
+  {
+    id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
+    name: "Men's Classic-fit Pleated Chino Pants",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 9017
+    },
+    reviews: 213,
+    priceCents: 2290,
+    keywords: [
+      "pants",
+      "apparel",
+      "mens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['beige']        
+    }, {
+      prop: 'image',
+      value: [['men-chino-pants-beige.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Men's Athletic Sneaker
+  {
+    id: "1c079479-8586-494f-ab53-219325432536",
+    name: "Men's Athletic Sneaker",
+    category: "fashion", 
+    rating: {
+      stars: 4,
+      count: 229
+    },
+    reviews: 213,
+    priceCents: 3890,
+    keywords: [
+      "shoes",
+      "running shoes",
+      "footwear",
+      "mens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['men-athletic-shoes-green.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Men's Navigator Sunglasses Pilot
+  {
+    id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
+    name: "Men's Navigator Sunglasses Pilot",
+    category: "fashion", 
+    rating: {
+      stars: 3.5,
+      count: 42
+    },
+    reviews: 213,
+    priceCents: 1690,
+    keywords: [
+      "sunglasses",
+    "glasses",
+      "accessories",
+      "shades"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['men-navigator-sunglasses-brown.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces
+  {
+    id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
+    name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 511
+    },
+    reviews: 213,
+    priceCents: 6797,
+    keywords: [
+      "cooking set",
+      "kitchen"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['non-stick-cooking-set-15-pieces.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Vanity Mirror with Heavy Base - Chrome
+  {
+    id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
+    name: "Vanity Mirror with Heavy Base - Chrome",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 130
+    },
+    reviews: 213,
+    priceCents: 1649,
+    keywords: [
+      "bathroom",
+      "washroom",
+      "mirrors",
+      "home"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['vanity-mirror-silver.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Women's Fleece Jogger Sweatpant
+  {
+    id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
+    name: "Women's Fleece Jogger Sweatpant",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 248
+    },
+    reviews: 213,
+    priceCents: 2400,
+    keywords: [
+      "pants",
+      "sweatpants",
+      "jogging",
+      "apparel",
+      "womens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['women-french-terry-fleece-jogger-camo.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Double Oval Twist French Wire Earrings - Gold
+  {
+    id: "d339adf3-e004-4c20-a120-40e8874c66cb",
+    name: "Double Oval Twist French Wire Earrings - Gold",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 117
+    },
+    reviews: 213,
+    priceCents: 2400,
+    keywords: [
+      "accessories",
+      "womens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['double-elongated-twist-french-wire-earrings.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Round Airtight Food Storage Containers - 5 Piece
+  {
+    id: "d37a651a-d501-483b-aae6-a9659b0757a0",
+    name: "Round Airtight Food Storage Containers - 5 Piece",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4,
+      count: 126
+    },
+    reviews: 213,
+    priceCents: 2899,
+    keywords: [
+      "boxes",
+      "food containers",
+      "kitchen"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['round-airtight-food-storage-containers.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black
+  {
+    id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
+    name: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 1211
+    },
+    reviews: 213,
+    priceCents: 2250,
+    keywords: [
+      "coffeemakers",
+      "kitchen",
+      "appliances"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['coffeemaker-with-glass-carafe-black.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels
+  {
+    id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
+    name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4.5,
+      count: 363
+    },
+    reviews: 213,
+    priceCents: 3099,
+    keywords: [
+      "bedroom",
+      "home"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['blackout-curtains-black.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // 100% Cotton Bath Towels - 2 Pack, Light Teal
+  {
+    id: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
+    name: "100% Cotton Bath Towels - 2 Pack, Light Teal",
+    category: "Health & Household", 
+    rating: {
+      stars: 4.5,
+      count: 93
+    },
+    reviews: 213,
+    priceCents: 2110,
+    keywords: [
+      "bathroom",
+      "home",
+      "towels"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['cotton-bath-towels-teal.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Waterproof Knit Athletic Sneakers - Pink
+  {
+    id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
+    name: "Waterproof Knit Athletic Sneakers - Pink",
+    category: "fashion", 
+    rating: {
+      stars: 4,
+      count: 89
+    },
+    reviews: 213,
+    priceCents: 3390,
+    keywords: [
+      "shoes",
+      "running shoes",
+      "footwear",
+      "womens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['knit-athletic-sneakers-pink.webp']]        
+    }
+    ]],
+    about: []
+  },
+  // Countertop Blender - 64oz, 1400 Watts
+  {
+    id: "77a845b1-16ed-4eac-bdf9-5b591882113d",
+    name: "Countertop Blender - 64oz, 1400 Watts",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 4,
+      count: 3
+    },
+    reviews: 213,
+    priceCents: 10747,
+    keywords: [
+      "food blenders",
+      "kitchen",
+      "appliances"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['countertop-blender-64-oz.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // 10-Piece Mixing Bowl Set with Lids - Floral
+  {
+    id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
+    name: "10-Piece Mixing Bowl Set with Lids - Floral",
+    category: "Home & Kitchen", 
+    rating: {
+      stars: 5,
+      count: 679
+    },
+    reviews: 213,
+    priceCents: 3899,
+    keywords: [
+      "mixing bowls",
+      "baking",
+      "cookware",
+      "kitchen"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['floral-mixing-bowl-set.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // 2-Ply Kitchen Paper Towels - 30 Pack
+  {
+    id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
+    name: "2-Ply Kitchen Paper Towels - 30 Pack",
+    category: "Health & Household", 
+    rating: {
+      stars: 4.5,
+      count: 1045
+    },
+    reviews: 213,
+    priceCents: 5799,
+    keywords: [
+      "kitchen",
+      "kitchen towels",
+      "tissues"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['kitchen-paper-towels-30-pack.jpg']]        
+    }
+    ]],
+    about: []
+  },
+  // Men's Full-Zip Hooded Fleece Sweatshirt
+  {
+    id: "bc2847e9-5323-403f-b7cf-57fde044a955",
+    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    category: "fashion", 
+    rating: {
+      stars: 4.5,
+      count: 3157
+    },
+    reviews: 213,
+    priceCents: 2400,
+    keywords: [
+      "sweaters",
+      "hoodies",
+      "apparel",
+      "mens"
+    ],
+    supplier: 'Sleek',
+    variants: [[
+    {
+      prop: 'color',
+      value: ['Default']        
+    }, {
+      prop: 'image',
+      value: [['men-cozy-fleece-zip-up-hoodie-red.jpg']]        
     }
     ]],
     about: []
