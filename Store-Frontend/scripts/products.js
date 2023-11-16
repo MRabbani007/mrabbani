@@ -3,7 +3,7 @@ const products = [
   // Redragon S101 Gaming Keyboard, Black, White
   {
     id: "4bb8ad86-7e90-46e1-bc57-fea910d978d4",
-    image: "images/products2/redragon_gaming_keyboard_1.jpg",
+    image: "images/products/redragon_gaming_keyboard_1.jpg",
     name: "Redragon S101 Gaming Keyboard, Black",
     description: "",
     category: "Computers", 
@@ -18,27 +18,10 @@ const products = [
       "keyboard"
     ]
   },
-  // {
-  //   id: "cdfa0a61-d59b-420d-bf3b-8948d158d9dc",
-  //   image: "images/products2/redragon_white_3.jpg",
-  //   name: "Redragon S101 Wired RGB Backlit Gaming Keyboard",
-  //   description: "",
-  //   category: "Computers", 
-  //   rating: {
-  //     stars: 4.5,
-  //     count: 3342
-  //   },
-  //   priceCents: 3999,
-  //   keywords: [
-  //     "computers",
-  //     "gaming",
-  //     "keyboard"
-  //   ]
-  // },
   // HP PC Gaming Keyboard and Mouse Combo
   {
     id: "1d079a98-913a-4b66-8f84-f6797b03e990",
-    image: "images/products2/hp_keyboard_1.jpg",
+    image: "images/products/hp_keyboard_1.jpg",
     name: "HP PC Gaming Keyboard and Mouse Combo",
     description: "",
     category: "Computers", 
@@ -56,7 +39,7 @@ const products = [
   // WILSON NBA Forge Series Indoor/Outdoor Basketballs
   {
     id: "f6ca90f5-2cfa-497a-8ed9-b3d7b4d26a25",
-    image: "images/products2/blue_grey_1.jpg",
+    image: "images/products/blue_grey_1.jpg",
     name: "WILSON NBA Forge Series Indoor/Outdoor Basketballs",
     description: "",
     category: "Sports & Outdoors", 
@@ -74,7 +57,7 @@ const products = [
   // Black and Gray Athletic Cotton Socks - 6 Pairs
   {
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-    image: "images/products2/athletic-cotton-socks-6-pairs.jpg",
+    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
     name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
     description: "",
     category: "fashion", 
@@ -92,7 +75,7 @@ const products = [
   // Intermediate Size Basketball
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    image: "images/products2/intermediate-composite-basketball.jpg",
+    image: "images/products/intermediate-composite-basketball.jpg",
     name: "Intermediate Size Basketball",
     description: "",
     category: "Sports & Outdoors",
@@ -109,7 +92,7 @@ const products = [
   // Adults Plain Cotton T-Shirt - 2 Pack
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    image: "images/products2/adults-plain-cotton-tshirt-2-pack-teal.jpg",
+    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
     name: "Adults Plain Cotton T-Shirt - 2 Pack",
     description: "",
     category: "fashion",
@@ -129,7 +112,7 @@ const products = [
   // 2 Slot Toaster - Black
   {
     id: "54e0eccd-8f36-462b-b68a-8182611d9add",
-    image: "images/products2/black-2-slot-toaster.jpg",
+    image: "images/products/black-2-slot-toaster.jpg",
     name: "2 Slot Toaster - Black",
     description: "",
     category: "Home & Kitchen",
@@ -147,7 +130,7 @@ const products = [
   // 6 Piece White Dinner Plate Set
   {
     id: "3ebe75dc-64d2-4137-8860-1f5a963e534b",
-    image: "images/products2/6-piece-white-dinner-plate-set.jpg",
+    image: "images/products/6-piece-white-dinner-plate-set.jpg",
     name: "6 Piece White Dinner Plate Set",
     description: "",
     category: "Home & Kitchen",
@@ -165,7 +148,7 @@ const products = [
   // 6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set
   {
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-    image: "images/products2/6-piece-non-stick-baking-set.webp",
+    image: "images/products/6-piece-non-stick-baking-set.webp",
     name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
     description: "",
     category: "Home & Kitchen",
@@ -182,7 +165,7 @@ const products = [
   // Plain Hooded Fleece Sweatshirt
   {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",
-    image: "images/products2/plain-hooded-fleece-sweatshirt-yellow.jpg",
+    image: "images/products/plain-hooded-fleece-sweatshirt-yellow.jpg",
     name: "Plain Hooded Fleece Sweatshirt",
     description: "",
     category: "fashion",
@@ -200,7 +183,7 @@ const products = [
   // Luxury Towel Set - Graphite Gray
   {
     id: "77919bbe-0e56-475b-adde-4f24dfed3a04",
-    image: "images/products2/luxury-tower-set-6-piece.jpg",
+    image: "images/products/luxury-tower-set-6-piece.jpg",
     name: "Luxury Towel Set - Graphite Gray",
     description: "",
     category: "Home & Kitchen",
@@ -220,7 +203,7 @@ const products = [
   // Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
-    image: "images/products2/liquid-laundry-detergent-plain.jpg",
+    image: "images/products/liquid-laundry-detergent-plain.jpg",
     name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
     description: "",
     category: "Health & Household",
@@ -237,7 +220,7 @@ const products = [
   // Waterproof Knit Athletic Sneakers - Gray
   {
     id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
-    image: "images/products2/knit-athletic-sneakers-gray.jpg",
+    image: "images/products/knit-athletic-sneakers-gray.jpg",
     name: "Waterproof Knit Athletic Sneakers - Gray",
     description: "",
     category: "fashion",
@@ -255,7 +238,7 @@ const products = [
   // Round Sunglasses
   {
     id: "aad29d11-ea98-41ee-9285-b916638cac4a",
-    image: "images/products2/round-sunglasses-black.jpg",
+    image: "images/products/round-sunglasses-black.jpg",
     name: "Round Sunglasses",
     description: "",
     category: "fashion",
@@ -272,7 +255,7 @@ const products = [
   // Women's Two Strap Buckle Sandals - Tan
   {
     id: "04701903-bc79-49c6-bc11-1af7e3651358",
-    image: "images/products2/women-beach-sandals.jpg",
+    image: "images/products/women-beach-sandals.jpg",
     name: "Women's Two Strap Buckle Sandals - Tan",
     description: "",
     category: "fashion",
@@ -292,7 +275,7 @@ const products = [
   // Blackout Curtains Set 4-Pack - Beige
   {
     id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
-    image: "images/products2/blackout-curtain-set-beige.webp",
+    image: "images/products/blackout-curtain-set-beige.webp",
     name: "Blackout Curtains Set 4-Pack - Beige",
     description: "",
     category: "Home & Kitchen",
@@ -310,7 +293,7 @@ const products = [
   // Men's Slim-Fit Summer Shorts
   {
     id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
-    image: "images/products2/men-slim-fit-summer-shorts-gray.jpg",
+    image: "images/products/men-slim-fit-summer-shorts-gray.jpg",
     name: "Men's Slim-Fit Summer Shorts",
     description: "",
     category: "fashion",
@@ -328,7 +311,7 @@ const products = [
   // Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter
   {
     id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
-    image: "images/products2/electric-glass-and-steel-hot-water-kettle.webp",
+    image: "images/products/electric-glass-and-steel-hot-water-kettle.webp",
     name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
     description: "",
     category: "Home & Kitchen",
@@ -346,7 +329,7 @@ const products = [
   // Ultra Soft Tissue 2-Ply - 18 Box
   {
     id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
-    image: "images/products2/facial-tissue-2-ply-18-boxes.jpg",
+    image: "images/products/facial-tissue-2-ply-18-boxes.jpg",
     name: "Ultra Soft Tissue 2-Ply - 18 Box",
     description: "",
     category: "Health & Household",
@@ -366,7 +349,7 @@ const products = [
   // Straw Lifeguard Sun Hat
   {
     id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
-    image: "images/products2/straw-sunhat.webp",
+    image: "images/products/straw-sunhat.webp",
     name: "Straw Lifeguard Sun Hat",
     description: "",
     category: "fashion",
@@ -385,7 +368,7 @@ const products = [
   // Sterling Silver Sky Flower Stud Earrings
   {
     id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
-    image: "images/products2/sky-flower-stud-earrings.webp",
+    image: "images/products/sky-flower-stud-earrings.webp",
     name: "Sterling Silver Sky Flower Stud Earrings",
     description: "",
     category: "fashion",
@@ -403,7 +386,7 @@ const products = [
   // Women's Stretch Popover Hoodie
   {
     id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
-    image: "images/products2/women-stretch-popover-hoodie-black.jpg",
+    image: "images/products/women-stretch-popover-hoodie-black.jpg",
     name: "Women's Stretch Popover Hoodie",
     description: "",
     category: "fashion",
@@ -425,7 +408,7 @@ const products = [
   // Bathroom Bath Rug Mat 20 x 31 Inch - Grey
   {
     id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
-    image: "images/products2/bathroom-rug.jpg",
+    image: "images/products/bathroom-rug.jpg",
     name: "Bathroom Bath Rug Mat 20 x 31 Inch - Grey",
     description: "",
     category: "Home & Kitchen",
@@ -443,7 +426,7 @@ const products = [
   // Women's Knit Ballet Flat
   {
     id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
-    image: "images/products2/women-knit-ballet-flat-black.jpg",
+    image: "images/products/women-knit-ballet-flat-black.jpg",
     name: "Women's Knit Ballet Flat",
     description: "",
     category: "fashion",
@@ -462,7 +445,7 @@ const products = [
   // Men's Regular-Fit Quick-Dry Golf Polo Shirt
   {
     id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
-    image: "images/products2/men-golf-polo-t-shirt-blue.jpg",
+    image: "images/products/men-golf-polo-t-shirt-blue.jpg",
     name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
     description: "",
     category: "fashion",
@@ -483,7 +466,7 @@ const products = [
   // Trash Can with Foot Pedal - Brushed Stainless Steel
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
-    image: "images/products2/trash-can-with-foot-pedal-50-liter.jpg",
+    image: "images/products/trash-can-with-foot-pedal-50-liter.jpg",
     name: "Trash Can with Foot Pedal - Brushed Stainless Steel",
     description: "",
     category: "Home & Kitchen",
@@ -502,7 +485,7 @@ const products = [
   // Duvet Cover Set with Zipper Closure
   {
     id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
-    image: "images/products2/duvet-cover-set-blue-twin.jpg",
+    image: "images/products/duvet-cover-set-blue-twin.jpg",
     name: "Duvet Cover Set with Zipper Closure",
     description: "",
     category: "Home & Kitchen",
@@ -522,7 +505,7 @@ const products = [
   // Women's Chunky Cable Beanie - Gray
   {
     id: "d2785924-743d-49b3-8f03-ec258e640503",
-    image: "images/products2/women-chunky-beanie-gray.webp",
+    image: "images/products/women-chunky-beanie-gray.webp",
     name: "Women's Chunky Cable Beanie - Gray",
     description: "",
     category: "fashion",
@@ -543,7 +526,7 @@ const products = [
   // Men's Classic-fit Pleated Chino Pants
   {
     id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
-    image: "images/products2/men-chino-pants-beige.jpg",
+    image: "images/products/men-chino-pants-beige.jpg",
     name: "Men's Classic-fit Pleated Chino Pants",
     description: "",
     category: "fashion",
@@ -561,7 +544,7 @@ const products = [
   // Men's Athletic Sneaker
   {
     id: "1c079479-8586-494f-ab53-219325432536",
-    image: "images/products2/men-athletic-shoes-green.jpg",
+    image: "images/products/men-athletic-shoes-green.jpg",
     name: "Men's Athletic Sneaker",
     description: "",
     category: "fashion",
@@ -580,7 +563,7 @@ const products = [
   // Men's Navigator Sunglasses Pilot
   {
     id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
-    image: "images/products2/men-navigator-sunglasses-brown.jpg",
+    image: "images/products/men-navigator-sunglasses-brown.jpg",
     name: "Men's Navigator Sunglasses Pilot",
     description: "",
     category: "fashion",
@@ -599,7 +582,7 @@ const products = [
   // Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces
   {
     id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
-    image: "images/products2/non-stick-cooking-set-15-pieces.webp",
+    image: "images/products/non-stick-cooking-set-15-pieces.webp",
     name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
     description: "",
     category: "Home & Kitchen",
@@ -616,7 +599,7 @@ const products = [
   // Vanity Mirror with Heavy Base - Chrome
   {
     id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
-    image: "images/products2/vanity-mirror-silver.jpg",
+    image: "images/products/vanity-mirror-silver.jpg",
     name: "Vanity Mirror with Heavy Base - Chrome",
     description: "",
     category: "Home & Kitchen",
@@ -635,7 +618,7 @@ const products = [
   // Women's Fleece Jogger Sweatpant
   {
     id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
-    image: "images/products2/women-french-terry-fleece-jogger-camo.jpg",
+    image: "images/products/women-french-terry-fleece-jogger-camo.jpg",
     name: "Women's Fleece Jogger Sweatpant",
     description: "",
     category: "fashion",
@@ -655,7 +638,7 @@ const products = [
   // Double Oval Twist French Wire Earrings - Gold
   {
     id: "d339adf3-e004-4c20-a120-40e8874c66cb",
-    image: "images/products2/double-elongated-twist-french-wire-earrings.webp",
+    image: "images/products/double-elongated-twist-french-wire-earrings.webp",
     name: "Double Oval Twist French Wire Earrings - Gold",
     description: "",
     category: "fashion",
@@ -672,7 +655,7 @@ const products = [
   // Round Airtight Food Storage Containers - 5 Piece
   {
     id: "d37a651a-d501-483b-aae6-a9659b0757a0",
-    image: "images/products2/round-airtight-food-storage-containers.jpg",
+    image: "images/products/round-airtight-food-storage-containers.jpg",
     name: "Round Airtight Food Storage Containers - 5 Piece",
     description: "",
     category: "Home & Kitchen",
@@ -690,7 +673,7 @@ const products = [
   // Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
-    image: "images/products2/coffeemaker-with-glass-carafe-black.jpg",
+    image: "images/products/coffeemaker-with-glass-carafe-black.jpg",
     name: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
     description: "",
     category: "Home & Kitchen",
@@ -708,7 +691,7 @@ const products = [
   // Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels
   {
     id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
-    image: "images/products2/blackout-curtains-black.jpg",
+    image: "images/products/blackout-curtains-black.jpg",
     name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
     description: "",
     category: "Home & Kitchen",
@@ -725,7 +708,7 @@ const products = [
   // 100% Cotton Bath Towels - 2 Pack, Light Teal
   {
     id: "8a53b080-6d40-4a65-ab26-b24ecf700bce",
-    image: "images/products2/cotton-bath-towels-teal.webp",
+    image: "images/products/cotton-bath-towels-teal.webp",
     name: "100% Cotton Bath Towels - 2 Pack, Light Teal",
     description: "",
     category: "Health & Household",
@@ -743,7 +726,7 @@ const products = [
   // Waterproof Knit Athletic Sneakers - Pink,
   {
     id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
-    image: "images/products2/knit-athletic-sneakers-pink.webp",
+    image: "images/products/knit-athletic-sneakers-pink.webp",
     name: "Waterproof Knit Athletic Sneakers - Pink",
     description: "",
     category: "fashion",
@@ -762,7 +745,7 @@ const products = [
   // Countertop Blender - 64oz, 1400 Watts
   {
     id: "77a845b1-16ed-4eac-bdf9-5b591882113d",
-    image: "images/products2/countertop-blender-64-oz.jpg",
+    image: "images/products/countertop-blender-64-oz.jpg",
     name: "Countertop Blender - 64oz, 1400 Watts",
     description: "",
     category: "Home & Kitchen",
@@ -780,7 +763,7 @@ const products = [
   // 10-Piece Mixing Bowl Set with Lids - Floral
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
-    image: "images/products2/floral-mixing-bowl-set.jpg",
+    image: "images/products/floral-mixing-bowl-set.jpg",
     name: "10-Piece Mixing Bowl Set with Lids - Floral",
     description: "",
     category: "Home & Kitchen",
@@ -799,7 +782,7 @@ const products = [
   // 2-Ply Kitchen Paper Towels - 30 Pack
   {
     id: "aaa65ef3-8d6f-4eb3-bc9b-a6ea49047d8f",
-    image: "images/products2/kitchen-paper-towels-30-pack.jpg",
+    image: "images/products/kitchen-paper-towels-30-pack.jpg",
     name: "2-Ply Kitchen Paper Towels - 30 Pack",
     description: "",
     category: "Health & Household",
@@ -817,7 +800,7 @@ const products = [
   // Men's Full-Zip Hooded Fleece Sweatshirt
   {
     id: "bc2847e9-5323-403f-b7cf-57fde044a955",
-    image: "images/products2/men-cozy-fleece-zip-up-hoodie-red.jpg",
+    image: "images/products/men-cozy-fleece-zip-up-hoodie-red.jpg",
     name: "Men's Full-Zip Hooded Fleece Sweatshirt",
     description: "",
     category: "fashion",
