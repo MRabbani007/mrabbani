@@ -211,5 +211,6 @@ function updateOrderDate(){
 }
 
 loadCart();
+console.log(cart)
 genCartHTML();
 genSummary();
