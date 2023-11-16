@@ -389,10 +389,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Teal','Black','Red']        
     }, {
       prop: 'image',
-      value: [['adults-plain-cotton-tshirt-2-pack-teal.jpg']]        
+      value: [['adults-plain-cotton-tshirt-2-pack-teal.jpg'],['adults-plain-cotton-tshirt-2-pack-black.jpg'],['adults-plain-cotton-tshirt-2-pack-red.jpg']]        
     }
     ]],
     about: []
@@ -500,10 +500,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Yellow','Teal']        
     }, {
       prop: 'image',
-      value: [['plain-hooded-fleece-sweatshirt-yellow.jpg']]        
+      value: [['plain-hooded-fleece-sweatshirt-yellow.jpg'],['plain-hooded-fleece-sweatshirt-teal.jpg']]        
     }
     ]],
     about: []
@@ -557,10 +557,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Plain','Lavender']        
     }, {
       prop: 'image',
-      value: [['liquid-laundry-detergent-plain.jpg']]        
+      value: [['liquid-laundry-detergent-plain.jpg'],['liquid-laundry-detergent-lavender.jpg']]        
     }
     ]],
     about: []
@@ -612,10 +612,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Black']        
+      value: ['Black','Gold']        
     }, {
       prop: 'image',
-      value: [['round-sunglasses-black.jpg']]        
+      value: [['round-sunglasses-black.jpg'],['round-sunglasses-gold.jpg']]        
     }
     ]],
     about: []
@@ -698,10 +698,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Gray']        
+      value: ['Gray','Black','Beige']        
     }, {
       prop: 'image',
-      value: [['men-slim-fit-summer-shorts-gray.jpg']]        
+      value: [['men-slim-fit-summer-shorts-gray.jpg'],['men-slim-fit-summer-shorts-black.jpg'],['men-slim-fit-summer-shorts-beige.jpg']]        
     }
     ]],
     about: []
@@ -843,10 +843,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Black']        
+      value: ['Black','Blue','Gray']        
     }, {
       prop: 'image',
-      value: [['women-stretch-popover-hoodie-black.jpg']]        
+      value: [['women-stretch-popover-hoodie-black.jpg'],['women-stretch-popover-hoodie-blue.jpg'],['women-stretch-popover-hoodie-gray.jpg']]        
     }
     ]],
     about: []
@@ -900,10 +900,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Black']        
+      value: ['Black','Gray','Leopard']        
     }, {
       prop: 'image',
-      value: [['women-knit-ballet-flat-black.jpg']]        
+      value: [['women-knit-ballet-flat-black.jpg'],['women-knit-ballet-flat-gray.jpg'],['women-knit-ballet-flat-leopard.jpg']]
     }
     ]],
     about: []
@@ -929,10 +929,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Blue','Red','Black']        
     }, {
       prop: 'image',
-      value: [['men-golf-polo-t-shirt-blue.jpg']]        
+      value: [['men-golf-polo-t-shirt-blue.jpg'],['men-golf-polo-t-shirt-red.jpg'],['men-golf-polo-t-shirt-black.jpg']]        
     }
     ]],
     about: []
@@ -957,13 +957,29 @@ const productsNew = [
     supplier: 'Sleek',
     variants: [[
     {
+      prop: 'size',
+      value: ['30 Liter']        
+    },
+    {
       prop: 'color',
-      value: ['Default']        
+      value: ['Gray-30']        
     }, {
       prop: 'image',
-      value: [['trash-can-with-foot-pedal-50-liter.jpg']]        
+      value: [['trash-can-with-foot-pedal-30-liter-tall.jpg']]        
     }
-    ]],
+    ],[
+      {
+        prop: 'size',
+        value: ['50 Liter']        
+      },
+      {
+        prop: 'color',
+        value: ['Gray-50']        
+      }, {
+        prop: 'image',
+        value: [['trash-can-with-foot-pedal-50-liter.jpg']]        
+      }
+      ]],
     about: []
   },
   // Duvet Cover Set with Zipper Closure
@@ -987,13 +1003,29 @@ const productsNew = [
     supplier: 'Sleek',
     variants: [[
     {
+      prop: 'size',
+      value: ['Twin']        
+    },
+    {
       prop: 'color',
-      value: ['Default']        
+      value: ['Blue-twin','Red-twin']        
     }, {
       prop: 'image',
-      value: [['duvet-cover-set-blue-twin.jpg']]        
+      value: [['duvet-cover-set-blue-twin.jpg'],['duvet-cover-set-red-twin.jpg']]        
     }
-    ]],
+    ],[
+      {
+        prop: 'size',
+        value: ['Queen']        
+      },
+      {
+        prop: 'color',
+        value: ['Blue-queen','Red-queen']        
+      }, {
+        prop: 'image',
+        value: [['duvet-cover-set-blue-queen.jpg'],['duvet-cover-set-red-queen.jpg']]        
+      }
+      ]],
     about: []
   },
   // Women's Chunky Cable Beanie - Gray
@@ -1047,10 +1079,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['beige']        
+      value: ['Beige','Black','Green']        
     }, {
       prop: 'image',
-      value: [['men-chino-pants-beige.jpg']]        
+      value: [['men-chino-pants-beige.jpg'],['men-chino-pants-black.jpg'],['men-chino-pants-green.jpg']]        
     }
     ]],
     about: []
@@ -1076,10 +1108,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Green','Black']        
     }, {
       prop: 'image',
-      value: [['men-athletic-shoes-green.jpg']]        
+      value: [['men-athletic-shoes-green.jpg'],['men-athletic-shoes-black.jpg']]        
     }
     ]],
     about: []
@@ -1105,10 +1137,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Brown','Silver']        
     }, {
       prop: 'image',
-      value: [['men-navigator-sunglasses-brown.jpg']]        
+      value: [['men-navigator-sunglasses-brown.jpg'],['men-navigator-sunglasses-silver.jpg']]        
     }
     ]],
     about: []
@@ -1191,10 +1223,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Camo','Gray']        
     }, {
       prop: 'image',
-      value: [['women-french-terry-fleece-jogger-camo.jpg']]        
+      value: [['women-french-terry-fleece-jogger-camo.jpg'],['women-french-terry-fleece-jogger-gray.jpg']]
     }
     ]],
     about: []
@@ -1329,7 +1361,7 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Teal']        
     }, {
       prop: 'image',
       value: [['cotton-bath-towels-teal.webp']]        
@@ -1472,10 +1504,10 @@ const productsNew = [
     variants: [[
     {
       prop: 'color',
-      value: ['Default']        
+      value: ['Red','Black']        
     }, {
       prop: 'image',
-      value: [['men-cozy-fleece-zip-up-hoodie-red.jpg']]        
+      value: [['men-cozy-fleece-zip-up-hoodie-red.jpg'],['men-cozy-fleece-zip-up-hoodie-black.jpg']]        
     }
     ]],
     about: []
