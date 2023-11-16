@@ -7,7 +7,6 @@ function genCartHTML(){
   let product;
   for(let i=0;i<cart.length;i++){
     product = products[getProductIndex(cart[i].productId)];
-    console.log(product)
     cartHTML += `
           <div class="row p-0" id="cart-item-${cart[i].productId}">
             <div class="card border-1 my-3 p-0">
@@ -69,7 +68,6 @@ function genCartHTML(){
 
 function saveOrder(){
   if(myOrders){
-    console.log(myOrders)
     localStorage.setItem('myOrders',JSON.stringify(myOrders));
   }
 }
@@ -211,6 +209,5 @@ function updateOrderDate(){
 }
 
 loadCart();
-console.log(cart)
 genCartHTML();
 genSummary();
