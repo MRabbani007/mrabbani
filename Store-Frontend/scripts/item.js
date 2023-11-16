@@ -138,7 +138,7 @@ function generateItemHTML(productID){
         propertiesHTML += `
           <div class="my-3">
             <h6>${productProps[i].property}</h6>
-            <select class="w-25 ${productProps[i].property}-menu" onchange="selectedChange(${productIndex},0)">${productProps[i].value}</select>
+            <select class="w-25 ${productProps[i].property}-menu" onchange="selectedChange(${productIndex},'${productProps[i].property}')">${productProps[i].value}</select>
           </div>
         `;
         break;
@@ -268,8 +268,9 @@ function getSelectedIndex(productIndex, selected){
   return -1;
 }
 
-function selectedChange(productIndex){
-  let propertyValue = document.querySelector('.size-menu').value;
+function selectedChange(productIndex, changedProperty){
+  // fixbug property
+  let propertyValue = document.querySelector(`.${changedProperty}-menu`).value;
   let variant = productsNew[productIndex].variants
   let selectedVariantIndex = -1;
   for(let i=0;i<variant.length;i++){
@@ -277,8 +278,14 @@ function selectedChange(productIndex){
       selectedVariantIndex = i;
     }
   }
-  document.querySelector('.style-cont').innerHTML = genBlockHTML(productIndex, 1, selectedVariantIndex)
-  document.querySelector('.color-cont').innerHTML = genMapHTML(productIndex,2,3, selectedVariantIndex)
+  try{
+    document.querySelector('.style-cont').innerHTML = genBlockHTML(productIndex, findProp(productIndex, 'style'), selectedVariantIndex)
+  } catch {
+  }
+  try{
+    document.querySelector('.color-cont').innerHTML = genMapHTML(productIndex,findProp(productIndex, 'color'),findProp(productIndex, 'image'), selectedVariantIndex)
+  } catch {
+  }
 }
 
 function genListHTML(productIndex, propertyIndex, selected=''){
@@ -341,7 +348,7 @@ function genMapHTML(productIndex,firstProp,secondProp, selectedVariantIndex = 0)
     let imageHTML = '';
     // in the case of second property is an image, render image block
     if(properties[secondProp].propertyName === 'image'){
-      imageHTML = `<img class="variants-thumb" src="../images/products2/${secondPropValue}">`
+      imageHTML = `<img class="variants-thumb" src="../images/products/${secondPropValue}">`
     } else {
       imageHTML = secondPropValue;
     }
@@ -422,10 +429,10 @@ function genThumbnailHTML(productIndex, propName, propValue){
   let product = productsNew[productIndex];
   product.variants[variantIndex][propIndex].value[valueIndex].forEach(image => {
     imageHTML += `
-    <img class="img-thumbnails" src="../images/products2/${image}" onmouseover="displayImage('../images/products2/${image}')" alt="">
+    <img class="img-thumbnails" src="../images/products/${image}" onmouseover="displayImage('../images/products/${image}')" alt="">
     `;
   })
-  const imgExpanded = `../images/products2/${product.variants[variantIndex][propIndex].value[valueIndex][0]}`;
+  const imgExpanded = `../images/products/${product.variants[variantIndex][propIndex].value[valueIndex][0]}`;
   return {imageHTML,imgExpanded};
 }
 
@@ -492,7 +499,6 @@ function carouselLeft(){
     })
     x--
   }
-  
 }
 // Load Carousel Items
 const carouselHTML = loadCarouselProducts(1);
