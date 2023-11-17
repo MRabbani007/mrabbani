@@ -31,9 +31,9 @@
     <!-- Search bar -->
     <div class="navbar-header">
       <div class="navbar-nav p-0 m-0" action="" name="search">
-        <div class="input-group">
+        <div class="input-group row">
           <!-- Category DropDown -->
-          <select name="category" id="cat-list" class="input-group-text form-select-sm w-10 text-start" >
+          <select name="category" id="cat-list" class="input-group-text form-select-sm w-10 text-start col-2" >
             <option value="all">All</option>
             <option value="electronics">Electronics</option>
             <option value="computers">Computers</option>
@@ -51,7 +51,7 @@
           <!-- Search Input -->
           <input type="text" id="searchBox" class="form-control searchBox" placeholder="Search">
           <!-- Search Button -->
-          <button class="btn btn-warning" onclick="searchNavbar('index')">
+          <button class="btn btn-warning col-2" onclick="searchNavbar('index')">
             <img class="icons" src="./images/icons/search.png">
           </button>
         </div>
@@ -97,19 +97,20 @@
     </div>
     <div class="offcanvas-body">
       <h6>Electronics</h6>
-      <h6>Computers</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','index','computers')">Computers</h6>
       <h6>Smart Home</h6>
       <h6>Arts & Crafts</h6>
       <hr>
       <h6>Automotive</h6>
       <h6>Beauty & Perrsonal Care</h6>
-      <h6>Fashion</h6>
-      <h6>Health & Household</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','index','fashion')">Fashion</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','index','Health & Household')">Health & Household</h6>
       <hr>
-      <h6>Home & Kitchen</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','index','Home & Kitchen')">Home & Kitchen</h6>
       <h6>Industrial & Scientific</h6>
       <h6>Tools & Home Improvement</h6>
-      <button class="btn btn-secondary" type="button" onclick="redirect('signin','index')">SignIn</button>
+      <h6  class="offcanvas-link" onclick="redirect('store','index','Sports & Outdoors')">Sports & Outdoors</h6>
+      <button class="btn btn-secondary my-3" type="button" onclick="redirect('signin','index')">SignIn</button>
     </div>
   </div>
 
