@@ -131,7 +131,7 @@ function displayItem(productID){
   window.location.replace("./item.html");
 }
 
-function redirect(target, callingPage=''){
+function redirect(target, callingPage='',category='all'){
   let destination = '';
   if(callingPage === 'index'){
     destination += './views/'
@@ -140,6 +140,27 @@ function redirect(target, callingPage=''){
   }
   if (target === 'signin'){
     destination += 'signin.html'
+  } else if ( target === 'store'){
+    destination += 'store.html'
+    session.searchCat = category
+    saveSession()
   }
   window.location.replace(destination)
+}
+
+function genRatings(rating){
+  console.log(rating)
+  let stars = '';
+  for (let i = 1 ; i<= 5; i++){
+    if(i === rating-0.5 ){
+      stars += '<span class="fa fa-star-half-o checked"></span>';
+    } else {
+      if(i <= rating){
+        stars += '<span class="fa fa-star checked"></span>';
+      } else {
+        stars += '<span class="fa fa-star-o checked"></span>';
+      }
+    }
+  }
+  return stars;
 }
