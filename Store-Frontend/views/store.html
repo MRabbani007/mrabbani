@@ -6,6 +6,8 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <!-- Font for rating stars -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Page Title -->
   <title>SLEEK</title>
   <!-- Stylesheets -->
@@ -97,19 +99,20 @@
     </div>
     <div class="offcanvas-body">
       <h6>Electronics</h6>
-      <h6>Computers</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','','computers')">Computers</h6>
       <h6>Smart Home</h6>
       <h6>Arts & Crafts</h6>
       <hr>
       <h6>Automotive</h6>
       <h6>Beauty & Perrsonal Care</h6>
-      <h6>Fashion</h6>
-      <h6>Health & Household</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','','fashion')">Fashion</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','','Health & Household')">Health & Household</h6>
       <hr>
-      <h6>Home & Kitchen</h6>
+      <h6 class="offcanvas-link" onclick="redirect('store','','Home & Kitchen')">Home & Kitchen</h6>
       <h6>Industrial & Scientific</h6>
       <h6>Tools & Home Improvement</h6>
-      <button class="btn btn-secondary" type="button" onclick="redirect('signin','index')">SignIn</button>
+      <h6  class="offcanvas-link" onclick="redirect('store','','Sports & Outdoors')">Sports & Outdoors</h6>
+      <button class="btn btn-secondary my-3" type="button" onclick="redirect('signin','')">SignIn</button>
     </div>
   </div>
 
