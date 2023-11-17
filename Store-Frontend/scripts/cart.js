@@ -201,6 +201,7 @@ function updateOrderTotal(){
     newOrder.orderTotal = orderTotal;
   }
 }
+
 function updateOrderID(){
   newOrder.orderID = genID();
 }
