@@ -1,6 +1,3 @@
-  // let allSizes = new Set([]);
-  // let allStyles = new Set([]);
-  // let allColors = new Set([]);
   let product;
 
   // Array to hold all properties from variants of product
@@ -159,7 +156,7 @@ function generateItemHTML(productID){
   <div class="container-fluid">
   <div class="row">
     <!-- Product Images -->
-    <div class="col-4 d-flex">
+    <div class="col-lg-4 d-flex">
       <div class="row">
         <!-- thumbnails -->
         <div class="col w-25 img-thumbs-cont">${imageHTML}</div>
@@ -171,16 +168,19 @@ function generateItemHTML(productID){
     </div>
 
     <!-- Product Details -->
-    <div class="col-6">
+    <div class="col-lg-6">
       <div class="card">
         <div class="card-header">
           <!-- Product Name -->
-          <h4>${product.name}</h4>
+          <p class="fs-4">${product.name}</p>
           <!-- Manufacturer/ Brand/ Supplier -->
           <p>Visit the ${product.supplier}</p>
           <div class="d-flex align-center">
             <span class="mx-2">${product.rating.stars}</span>
+            <span class="rating">${genRatings(product.rating.stars)}</span>
+            <!--
             <img class="img-ratings" src='${getRatingsImage(product.rating.stars)}'>
+            -->
             <span class="mx-2">${product.rating.count} Ratings</span>
             <span class="mx-2">${product.reviews} Reviews</span>
           </div>
@@ -204,7 +204,7 @@ function generateItemHTML(productID){
     </div>
 
     <!-- Summary & Checkout -->
-    <div class="col-2">
+    <div class="col-lg-2">
       <div class="card p-2">
         <div class="price my-3">
           <small class="price-currency">$</small>
