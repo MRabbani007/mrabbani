@@ -66,7 +66,8 @@ function setPagination(productCount, activeIndex){
 }
 
 function setProducts(batchNumber){
-  document.querySelector('.products-container').innerHTML = loadProducts(batchNumber)
+  document.querySelector('.products-container').innerHTML = loadProducts(batchNumber);
+  document.querySelector('.pagination').innerHTML = genPagination(displayProducts.length, batchNumber);
 }
 
 function searchButton(){
@@ -112,7 +113,7 @@ function main(){
 
   loadSession();
   // check if user directed to search
-  if(session.searchCat != 'all' || session.searchQuery != ''){
+  if(session.searchCat.toLowerCase() != 'all' || session.searchQuery != ''){
     document.getElementById("cat-list").value = session.searchCat;
     document.querySelector('.searchBox').value = session.searchQuery;
     searchProducts(session.searchCat, session.searchQuery)
