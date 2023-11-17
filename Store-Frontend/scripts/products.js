@@ -838,9 +838,11 @@ function generateProductHTML(productID){
   let product = products[getProductIndex(productID)];
   let productHTML = `
     <div class="col-lg-3 col-sm-4">
-      <div class="card w-100" style="height:350px">
-        <div class="card-header m-auto bg-white">
-          <div class="card-img-top d-flex" onclick="displayItem('${productID}')"><img id="img-" class="photo" src="../${product.image}"></div>
+      <div class="card w-100 border-0" style="height:350px">
+        <div class="card-header p-0 m-0 bg-white border-0">
+          <div class="card-img-top d-flex h-100" onclick="displayItem('${productID}')">
+            <img id="" class="photo mx-auto" src="../${product.image}">
+          </div>
         </div>
         <div class="card-body overflow-auto">
           <div class="price-ratings-container">
@@ -849,9 +851,11 @@ function generateProductHTML(productID){
               <div class="price-int">${Math.floor(product.priceCents/100)}</div>
               <div class="price cents">${product.priceCents-Math.floor((product.priceCents/100))*100}</div>
             </div>
-            <div class="rating"><img class="ratings-img" src="../${getRatingsImage(product.rating.stars)}">
+            <div class="rating">
+              ${genRatings(product.rating.stars)}
+              <!-- <img class="ratings-img" src="../${getRatingsImage(product.rating.stars)}"> -->
             </div>
-            </div>
+          </div>
             <div class="card-title">${product.name}</div>
             <!--
             <div class="card-subtitle h5">${product.description}</div>
@@ -906,7 +910,9 @@ function genCarouselProductHTML(productID){
   let productHTML = `
       <div class="card item w-25 mx-2" style="height:400px; min-width:300px">
         <div class="card-header m-auto bg-white" style="height:60%">
-          <div class="card-img-top d-flex justify-content-center" onclick="displayItem('${productID}')"><img class="carousel-photo" src="../${product.image}"></div>
+          <div class="card-img-top d-flex justify-content-center" onclick="displayItem('${productID}')">
+            <img class="carousel-photo" src="../${product.image}">
+          </div>
         </div>
         <div class="card-body overflow-auto">
           <div class="price-ratings-container">
@@ -915,7 +921,11 @@ function genCarouselProductHTML(productID){
               <div class="price-int">${Math.floor(product.priceCents/100)}</div>
               <div class="price cents">${product.priceCents-Math.floor((product.priceCents/100))*100}</div>
             </div>
-            <div class="rating"><img class="ratings-img" src="${getRatingsImage(product.rating.stars)}">
+            <div class="rating">
+            ${genRatings(product.rating.stars)}
+            <!--
+            <img class="ratings-img" src="${getRatingsImage(product.rating.stars)}">
+            -->
             </div>
             </div>
             <div class="card-title">${product.name}</div>
