@@ -29,11 +29,15 @@ a{
 }
 
 .photo {
-  height: 150px;
-  max-width: 200px;
+  height: 100%;
+  max-width: 100%;
 }
 .cart-photo {
   width: 100px;
+}
+
+.checked {
+  color: orange;
 }
 
 .ratings-img {
@@ -46,42 +50,19 @@ a{
 
 .rating {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: center
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
 }
 
-.rating>input {
-  display: none
+.checked:hover {
+ font-size: 27px;
 }
 
-.rating>label {
-  position: relative;
-  width: 1em;
-  font-size: 30px;
-  font-weight: 300;
-  color: #FFD600;
-  cursor: pointer
+.offcanvas-link{
+  cursor: pointer;
+  color: orange;
 }
-
-.rating>label::before {
-  content: "\2605";
-  position: absolute;
-  opacity: 0
-}
-
-.rating>label:hover:before,
-.rating>label:hover~label:before {
-  opacity: 1 !important
-}
-
-.rating>input:checked~label:before {
-  opacity: 1
-}
-
-.rating:hover>input:checked~label:before {
-  opacity: 0.4
-}
-
 
 .buttons{
   top: 36px;
@@ -114,16 +95,6 @@ a{
   vertical-align: text-top;
 }
 
-.rating-submit{
-  border-radius: 15px;
-  color: #fff;
-  height: 49px;
-}
-
-.rating-submit:hover{
-  color: #fff;
-}
-
 .product-img {
   width: 200px;
   max-height: 150px;
@@ -144,14 +115,16 @@ a{
 .card-photo {
   justify-self: center;
   margin: auto 0;
-  max-width: 100%;
-  max-height: 200px;
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
 }
 
 .img-ratings {
   width: 100px;
   height: 20px;
 }
+
 /*
 @media (min-width: 576px) {
   body::before {
