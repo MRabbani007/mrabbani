@@ -70,6 +70,7 @@ a{
 }
 
 .logo {
+  max-width: 100px;
   height: 30px;
 }
 
@@ -109,7 +110,6 @@ a{
 }
 
 .w-20 {
-  max-width: 100px;
 }
 
 /* used for index page cards */
@@ -151,7 +151,6 @@ a{
 /* Medium 768px*/
 @media (max-width: 800px) {
   .logo {
-    height: 30px;
     content: url('../images/icons/logo-small.png');
   }
 }
