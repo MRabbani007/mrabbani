@@ -39,21 +39,24 @@ function genItemsHTML(order){
   let itemHTML = ''
   for ( let i=0; i< order.orderItems.length; i++){
     itemHTML += `
-      <div class="order-item d-grid p-0 my-3" style="grid-template-columns: 1fr 4fr 2fr">
-      <div><img class="product-img mx-3 w-10" src="../${products[getProductIndex(order.orderItems[i].productID)].image}" alt=""></div>
-      <div>
-        <div class="h5 p-0 m-0">${order.orderItems[i].productName}</div>
-        <div>Arriving on: <span>${order.orderItems[i].deliveryDate}</span></div>
-        <div>Quanity: ${order.orderItems[i].orderQuantity}</div>
-        <button class="text-center text-bg-warning border-0 rounded-3 my-2 py-2 px-3" onclick="buyItAgain('${order.orderItems[i].productID}')">
-          <img class="icons" src="../images/icons/buy-again.png">
-          Buy it again
-        </button>
+      <div class="order-item row justify-content-between p-0 my-3 mx-0">
+        <!-- Item Image -->
+        <img class="product-img col-md-4 col-sm-6" src="../${products[getProductIndex(order.orderItems[i].productID)].image}" alt="">
+        <!-- Item Details -->
+        <div class="col-md-6 col-sm-10">
+          <div class="h5 p-0 m-0">${order.orderItems[i].productName}</div>
+          <div>Arriving on: <span>${order.orderItems[i].deliveryDate}</span></div>
+          <div>Quanity: ${order.orderItems[i].orderQuantity}</div>
+          <button class="text-center text-bg-warning border-0 rounded-3 my-2 py-2 px-3" onclick="buyItAgain('${order.orderItems[i].productID}')">
+            <img class="icons" src="../images/icons/buy-again.png">
+            Buy it again
+          </button>
+        </div>
+        <!-- Track Package -->
+        <div class="col-md-2 col-sm-6">
+          <button class="text-bg-light w-75 border-1 border-info rounded-1 m-auto">Track Package</button>
+        </div>
       </div>
-      <div class="d-flex align-items-start justify-content-center">
-        <button class="text-bg-light w-75 border-1 border-info rounded-1 m-auto">Track Package</button>
-      </div>
-    </div>
     `;
   }
   return itemHTML;
@@ -64,21 +67,23 @@ function genOrderHTML(){
   for(let i=0; i<myOrders.length; i++){
     orderHTML+= `
     <div class="card my-4">
-    <div class="card-header d-grid" style="grid-template-columns: 1fr 2fr 2fr 0.25fr">
-      <div class="d-block">
+    <!-- Order Header -->
+    <div class="card-header row d-flex justify-content-between">
+      <div class="col-md-2 col-sm-7 mx-0 p-0">
         <div class="h5">Order Placed</div>
         <div class="text-sm-start">${myOrders[i].orderDeliveryDate}</div>
       </div>
-      <div class="d-block">
+      <div class="col-md-4 col-sm-7 mx-0 p-0">
         <div class="h5">Total</div>
         <div class="text-sm-start">$${myOrders[i].orderTotal/100}</div>
       </div>
-      <div class="d-block">
+      <div class="col-md-5 col-sm-6 mx-0 p-0">
         <div class="h5">Order ID:</div>
         <div class="text-sm-start">${myOrders[i].orderID}</div>
       </div>
-      <div class="" onclick="deleteOrder('${myOrders[i].orderID}')"><img class="icons" src="../images/icons/cancel.png"></div>
+      <div class="col-1 mx-0 p-0" onclick="deleteOrder('${myOrders[i].orderID}')"><img class="icons" src="../images/icons/cancel.png"></div>
     </div>
+    <!-- Order Items -->
     <div class="card-body">
       `+genItemsHTML(myOrders[i])+`
     </div>

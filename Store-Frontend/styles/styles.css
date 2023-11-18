@@ -69,6 +69,10 @@ a{
   position: relative;
 }
 
+.logo {
+  height: 30px;
+}
+
 .delete-order-btn {
   background-color: red;
   color: white;
@@ -111,7 +115,19 @@ a{
 /* used for index page cards */
 .width-20 {
   min-width: 200px;
-  width: 20%;
+  width: 280px;
+}
+
+.select-cat {
+  width: clamp(70px,20%,100px);
+}
+
+.nav-search-btn{
+  width: clamp(60px,20%,80px);;
+}
+
+.width-50 {
+  width: 50%;
 }
 
 .card-photo {
@@ -131,17 +147,11 @@ a{
 }
 /* Small */
 @media (max-width: 576px) {
-  .width-20 {
-    width: 80%;
-  }
-  .logo {
-    display: none;
-  }
 }
-/* Medium */
-@media (max-width: 768px) {
+/* Medium 768px*/
+@media (max-width: 800px) {
   .logo {
-    height: 40px;
+    height: 30px;
     content: url('../images/icons/logo-small.png');
   }
 }
