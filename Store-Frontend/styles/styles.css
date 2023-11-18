@@ -127,18 +127,18 @@ a{
   height: 20px;
 }
 
-/*
-@media (min-width: 576px) {
-  body::before {
-    content: "SM";
-  }
-}
-*/
 @media (max-width: 370px) {
   .logo {
     display: none;
   }
 }
+/* Small */
+@media (max-width: 576px) {
+  .width-20 {
+    width: 80%;
+  }
+}
+/* Medium */
 @media (max-width: 768px) {
   .logo {
     height: 40px;
