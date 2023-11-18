@@ -24,18 +24,18 @@
   <!-- Navigation Bar -->
   <nav class="navbar navbar-dark bg-color-gradient sticky-top">
     <!-- Button to open the offcanvas sidebar -->
-    <div class="navbar-header">
-      <button class="btn btn-dark mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+    <div class="navbar-header mx-lg-3 mx-sm-0 d-flex flex-nowrap">
+      <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
         <img class="icons" src="../images/icons/menu.svg">
       </button>
-      <a class="navbar-brand" href="../index.html"><img class="w-20" src="../images/icons/logo.png" alt=""></a>
+      <a class="navbar-brand" href="../index.html"><img class="w-20 logo" src="../images/icons/logo.png" alt=""></a>
     </div>
     <!-- Search bar -->
-    <div class="navbar-header">
-      <div class="navbar-nav p-0 m-0" action="" name="search">
-        <div class="input-group">
+    <div class="navbar-header mx-lg-3 mx-sm-0">
+      <div class="navbar-nav" action="" name="search">
+        <div class="input-group row">
           <!-- Category DropDown -->
-          <select name="category" id="cat-list" class="input-group-text form-select-sm w-10 text-start" >
+          <select name="category" id="cat-list" class="input-group-text form-select-sm col-2 text-start">
             <option value="all">All</option>
             <option value="electronics">Electronics</option>
             <option value="computers">Computers</option>
@@ -51,9 +51,9 @@
             <option value="Sports & Outdoors">Sports & Outdoors</option>
           </select>
           <!-- Search Input -->
-          <input type="text" id="searchBox" class="form-control searchBox" placeholder="Search">
+          <input type="text" id="searchBox" class="form-control searchBox col col-sm-2" placeholder="Search">
           <!-- Search Button -->
-          <button class="btn btn-warning" onclick="searchNavbar()">
+          <button class="btn btn-warning col-2 p-0" onclick="searchNavbar()">
             <img class="icons" src="../images/icons/search.png">
           </button>
         </div>
@@ -61,7 +61,10 @@
     </div>
     <!-- Sign in & Cart -->
     <div class="navbar-header d-flex">
-      <div class="nav-item dropdown p-0 mx-3 my-auto"><a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"><img class="icons" src="../images/icons/user-white.png"></a>
+      <div class="nav-item dropdown p-0 mx-lg-3 mx-sm-0 my-auto">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+          <img class="icons" src="../images/icons/user-white.png">
+        </a>
         <ul class="dropdown-menu dropdown-menu-end rounded-0">
             <li class=""><a class="dropdown-item" href="./signin.html">Sign In</a></li>
             <li><a class="dropdown-item" href="./signup.html">Sign Up</a></li>
@@ -74,7 +77,7 @@
             <li><a class="dropdown-item" href="#">Change Location</a></li>
         </ul>
       </div>
-      <div class="nav-item p-0 mx-3 my-auto">
+      <div class="nav-item p-0 mx-lg-3 mx-sm-0 my-auto">
         <a class="nav-link" href="./cart.html">
           <div class="btn position-relative  p-0 m-0 my-auto cart-container">
             <img class="cart-icon" src="../images/icons/cart.png">
