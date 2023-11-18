@@ -18,7 +18,7 @@
 </head>
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar navbar-dark bg-color-gradient sticky-top">
+  <nav class="navbar navbar-dark bg-color-gradient sticky-top flex-nowrap">
     <!-- Button to open the offcanvas sidebar -->
     <div class="navbar-header mx-lg-3 mx-sm-0 d-flex flex-nowrap">
       <button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
@@ -31,7 +31,7 @@
       <div class="navbar-nav" action="" name="search">
         <div class="input-group row">
           <!-- Category DropDown -->
-          <select name="category" id="cat-list" class="input-group-text form-select-sm col-2 text-start">
+          <select name="category" id="cat-list" class="input-group-text form-select-sm col-2 text-start" >
             <option value="all">All</option>
             <option value="electronics">Electronics</option>
             <option value="computers">Computers</option>
@@ -85,7 +85,7 @@
   </nav>
 
   <!-- Offcanvas Sidebar -->
-  <div class="offcanvas offcanvas-start w-25" id="demo">
+  <div class="offcanvas offcanvas-start" id="demo">
     <div class="offcanvas-header text-bg-dark">
       <h5 class="offcanvas-title">
           <img class="icons" src="../images/icons/user-white.png">
