@@ -109,13 +109,14 @@ a{
   width: clamp(80px,15%,120px);
 }
 
-.w-20 {
-}
-
 /* used for index page cards */
 .width-20 {
   min-width: 200px;
   width: 280px;
+}
+
+.width-50 {
+  width: 50%;
 }
 
 .select-cat {
@@ -124,10 +125,6 @@ a{
 
 .nav-search-btn{
   width: clamp(60px,20%,80px);;
-}
-
-.width-50 {
-  width: 50%;
 }
 
 .card-photo {

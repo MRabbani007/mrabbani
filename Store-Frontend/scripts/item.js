@@ -156,12 +156,12 @@ function generateItemHTML(productID){
   <div class="container-fluid">
   <div class="row">
     <!-- Product Images -->
-    <div class="col-lg-4 d-flex">
-      <div class="row">
+    <div class="col-lg-4">
+      <div class="row justify-content-center">
         <!-- thumbnails -->
-        <div class="col w-25 img-thumbs-cont">${imageHTML}</div>
+        <div class="col-3 img-thumbs-cont">${imageHTML}</div>
         <!-- Expanded Image -->
-        <div class="col w-75 expanded-image">
+        <div class="col">
           <img class="img-expanded" src="${imgExpanded}" alt="">
         </div>
       </div>
