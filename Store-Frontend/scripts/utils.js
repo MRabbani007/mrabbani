@@ -140,7 +140,10 @@ function redirect(target, callingPage='',category='all'){
   }
   if (target === 'signin'){
     destination += 'signin.html'
-  } else if ( target === 'store'){
+  } else if(target === 'signup'){
+    destination += 'signup.html'
+  }
+  else if ( target === 'store'){
     destination += 'store.html'
     session.searchCat = category
     saveSession()

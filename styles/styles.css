@@ -38,7 +38,7 @@ a {
   font-family: var(--font-Supreme);
   font-size: var(--fs-sm);
   font-weight: 200;
-  padding: 0px 30px;
+  padding: 0px 10%;
   position: sticky;
   top: 0;
   display: flex;
@@ -48,7 +48,7 @@ a {
 
 .nav a{
   color: var(--clr-indigo-950);
-  width: 14%;
+  /* width: 14%; */
 }
 .menu-link {
   display: flex;
@@ -62,15 +62,15 @@ a {
   padding: 0 10px;
 }
 .menu-link:hover{
-  border-bottom: 2px solid var(--clr-indigo-950);
+  border-bottom: 4px solid var(--clr-indigo-950);
 }
 .menu-icons {
   width: 40px;
 }
 .active {
-  /* border-bottom: 5px solid var(--clr-indigo-950); */
-  background-color: rgb(197, 197, 197);
-  color: white;
+  border-bottom: 2px solid var(--clr-indigo-950);
+  /* background-color: rgb(197, 197, 197); */
+  /* color: white; */
 }
 
 /* Utility Classes */
@@ -595,6 +595,9 @@ a {
   }
   .list-item {
     text-align: left;
+  }
+  .nav{
+    padding: 0;
   }
 }
 /* md */
